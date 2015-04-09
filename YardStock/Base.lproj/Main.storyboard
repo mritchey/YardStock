@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wmE-xS-alW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wmE-xS-alW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--YardStock-->
+        <!--Stockyards-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="YardsTableViewController" customModule="YardStock" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,7 +57,7 @@
                             <constraint firstAttribute="trailing" secondItem="IXJ-b2-fRH" secondAttribute="trailing" id="s4g-aT-VxQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="YardStock" id="PkY-tZ-9RH"/>
+                    <navigationItem key="navigationItem" title="Stockyards" id="PkY-tZ-9RH"/>
                     <connections>
                         <outlet property="StockyardsTable" destination="IXJ-b2-fRH" id="ULb-cZ-Yxw"/>
                         <segue destination="RHL-zh-f7f" kind="show" identifier="toStockyard" id="JLr-4U-MJZ"/>
@@ -84,7 +85,7 @@
             </objects>
             <point key="canvasLocation" x="2123" y="-292"/>
         </scene>
-        <!--Recent Report View Controller-->
+        <!--Recent Report-->
         <scene sceneID="hfO-sv-xMl">
             <objects>
                 <viewController id="RHL-zh-f7f" customClass="RecentReportViewController" customModule="YardStock" customModuleProvider="target" sceneMemberID="viewController">
@@ -95,8 +96,120 @@
                     <view key="view" contentMode="scaleToFill" id="UiA-Hn-xAX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QpS-JO-j3a">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="124" id="h35-6Q-TR8">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h35-6Q-TR8" id="E2X-26-FsZ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Arcadia Valley Livestock LLC" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qz-N0-KEe">
+                                                    <rect key="frame" x="18" y="15" width="564" height="38.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="564" id="Uwz-oV-Mk1"/>
+                                                        <constraint firstAttribute="height" constant="38.5" id="gir-R7-Xcp"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbZ-1s-sbJ">
+                                                    <rect key="frame" x="18" y="54" width="564" height="68"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">1630 SE 65 Highway, Kingsville
+(816)123-4567
+Cattle</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8Qz-N0-KEe" firstAttribute="top" secondItem="E2X-26-FsZ" secondAttribute="topMargin" constant="7" id="Bzw-as-Emv"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="GbZ-1s-sbJ" secondAttribute="bottom" constant="-6" id="FkY-bs-Mrb"/>
+                                                <constraint firstItem="GbZ-1s-sbJ" firstAttribute="leading" secondItem="E2X-26-FsZ" secondAttribute="leadingMargin" constant="10" id="Zgd-2f-C42"/>
+                                                <constraint firstItem="8Qz-N0-KEe" firstAttribute="leading" secondItem="E2X-26-FsZ" secondAttribute="leadingMargin" constant="10" id="bH3-Gf-W8l"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GbZ-1s-sbJ" secondAttribute="trailing" constant="10" id="hAT-OG-YFG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8Qz-N0-KEe" secondAttribute="trailing" constant="10" id="us9-ff-Dq4"/>
+                                                <constraint firstItem="GbZ-1s-sbJ" firstAttribute="top" secondItem="8Qz-N0-KEe" secondAttribute="bottom" id="vBj-jE-dEW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="segControlCell" id="9wo-BA-UYN">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9wo-BA-UYN" id="UNN-yn-KSh">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="5iF-qg-rfb">
+                                                    <rect key="frame" x="-3" y="8" width="606" height="29"/>
+                                                    <segments>
+                                                        <segment title="Reports"/>
+                                                        <segment title="Recent"/>
+                                                        <segment title="Upcoming"/>
+                                                    </segments>
+                                                    <color key="tintColor" red="0.75294117647058822" green="0.47058823529411764" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="segChanged:" destination="RHL-zh-f7f" eventType="valueChanged" id="rca-8c-VHi"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5iF-qg-rfb" secondAttribute="bottom" id="NK2-Sy-fGo"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5iF-qg-rfb" secondAttribute="trailing" constant="-11" id="Pb0-ds-Ste"/>
+                                                <constraint firstItem="5iF-qg-rfb" firstAttribute="top" secondItem="UNN-yn-KSh" secondAttribute="topMargin" id="V4Y-QR-9i0"/>
+                                                <constraint firstItem="5iF-qg-rfb" firstAttribute="leading" secondItem="UNN-yn-KSh" secondAttribute="leadingMargin" constant="-11" id="ge4-3W-SmE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="reportCell" rowHeight="300" id="LG1-0n-nLL">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LG1-0n-nLL" id="wrI-UE-994">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L67-18-H5D">
+                                                    <rect key="frame" x="18" y="8" width="564" height="273.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="273.5" id="YlU-GS-OPq"/>
+                                                    </constraints>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="L67-18-H5D" firstAttribute="top" secondItem="wrI-UE-994" secondAttribute="topMargin" id="Vn4-kz-ERl"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="L67-18-H5D" secondAttribute="trailing" constant="10" id="hMd-Hq-QxD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="L67-18-H5D" secondAttribute="bottom" constant="10" id="ocO-Bd-d4V"/>
+                                                <constraint firstItem="L67-18-H5D" firstAttribute="leading" secondItem="wrI-UE-994" secondAttribute="leadingMargin" constant="10" id="zKJ-Rz-1C1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RHL-zh-f7f" id="hB9-0d-6he"/>
+                                    <outlet property="delegate" destination="RHL-zh-f7f" id="00P-zL-4f2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QpS-JO-j3a" secondAttribute="trailing" id="124-Ff-uCh"/>
+                            <constraint firstAttribute="bottom" secondItem="QpS-JO-j3a" secondAttribute="bottom" id="3H7-0c-QcR"/>
+                            <constraint firstItem="QpS-JO-j3a" firstAttribute="leading" secondItem="UiA-Hn-xAX" secondAttribute="leading" id="iYI-CA-Tz9"/>
+                            <constraint firstItem="QpS-JO-j3a" firstAttribute="top" secondItem="UiA-Hn-xAX" secondAttribute="top" id="j9f-T7-Ant"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Recent Report" id="Lor-J4-HbZ"/>
+                    <connections>
+                        <outlet property="pageTitle" destination="Lor-J4-HbZ" id="Zjw-BF-FJg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="utZ-Zm-tS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

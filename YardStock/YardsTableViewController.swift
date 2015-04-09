@@ -18,6 +18,7 @@ class YardsTableViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         stockyards.load(urlString) {
             (companies, errorString) -> Void in
             if let unwrappedErrorString = errorString {
@@ -28,6 +29,10 @@ class YardsTableViewController: UIViewController, UITableViewDataSource, UITable
                 self.StockyardsTable.reloadData()
             }
         }
+        
+        navigationController?.navigationBar.barTintColor = UIColor(red: 192/255, green: 120/255, blue: 26/255, alpha: 1.0)
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
