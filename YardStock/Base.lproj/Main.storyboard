@@ -108,7 +108,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Arcadia Valley Livestock LLC" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qz-N0-KEe">
-                                                    <rect key="frame" x="18" y="15" width="564" height="39"/>
+                                                    <rect key="frame" x="18" y="15" width="564" height="38.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="564" id="Uwz-oV-Mk1"/>
@@ -172,7 +172,7 @@ Cattle</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L67-18-H5D">
-                                                    <rect key="frame" x="18" y="8" width="564" height="274"/>
+                                                    <rect key="frame" x="18" y="8" width="564" height="273.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="273.5" id="YlU-GS-OPq"/>
