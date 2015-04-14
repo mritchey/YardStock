@@ -45,7 +45,7 @@ class YardsTableViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(prototypeCellIdentifier) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(prototypeCellIdentifier) as! UITableViewCell
         cell.textLabel?.text = stockyards.yards[indexPath.row].name
         cell.detailTextLabel?.text = stockyards.yards[indexPath.row].city + ", MO"
         //code to set cell info
@@ -60,7 +60,7 @@ class YardsTableViewController: UIViewController, UITableViewDataSource, UITable
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let destViewController = segue.destinationViewController as RecentReportViewController
+        let destViewController = segue.destinationViewController as! RecentReportViewController
         
         destViewController.stockyard = selectedYard
     }
