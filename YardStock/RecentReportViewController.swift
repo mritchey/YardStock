@@ -23,6 +23,11 @@ class RecentReportViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //add nav title back
+    override func viewWillDisappear(animated: Bool) {
+        navigationController?.navigationBar.topItem?.title = "Stockyards"
+    }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
