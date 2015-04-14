@@ -14,7 +14,7 @@ class RecentReportViewController: UIViewController {
     
     var stockyard: Yard?
     
-    @IBOutlet weak var Title: UITextView!
+    //@IBOutlet weak var Title: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,7 +53,7 @@ class RecentReportViewController: UIViewController {
     
 
     @IBAction func segChanged(sender: AnyObject) {
-        let segControl = sender as UISegmentedControl
+        let segControl = sender as! UISegmentedControl
         let selected = segControl.selectedSegmentIndex
         
         if selected == 0 {
