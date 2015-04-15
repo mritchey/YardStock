@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>370EFE2E-52F8-48C4-B282-9AFA11CE4766</string>
 	<key>IDESourceControlProjectName</key>
-	<string>YardStock</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>823101C0514BE688EAAF1CF9D647636BFF0EA926</key>
 		<string>https://github.com/mritchey/YardStock.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>YardStock.xcodeproj</string>
+	<string>YardStock.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>823101C0514BE688EAAF1CF9D647636BFF0EA926</key>

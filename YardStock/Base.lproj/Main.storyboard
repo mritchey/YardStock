@@ -101,54 +101,71 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="124" id="h35-6Q-TR8">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="118" id="ljs-4D-ca3">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h35-6Q-TR8" id="E2X-26-FsZ">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ljs-4D-ca3" id="y6Z-Fj-MbG">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Arcadia Valley Livestock LLC" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qz-N0-KEe">
-                                                    <rect key="frame" x="18" y="15" width="564" height="38.5"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arcadia Valley Livestock LLC" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRL-cQ-ZYS">
+                                                    <rect key="frame" x="11" y="8" width="571" height="46"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234 Runnymede Dr." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g77-HN-oBV">
+                                                    <rect key="frame" x="11" y="59" width="571" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="564" id="Uwz-oV-Mk1"/>
-                                                        <constraint firstAttribute="height" constant="38.5" id="gir-R7-Xcp"/>
+                                                        <constraint firstAttribute="height" constant="15" id="g94-Dv-xub"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbZ-1s-sbJ">
-                                                    <rect key="frame" x="18" y="54" width="564" height="68"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="68" id="f6W-C3-pDj"/>
-                                                    </constraints>
-                                                    <string key="text">1630 SE 65 Highway, Kingsville
-(816)123-4567
-Cattle</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="St. Charles, MO" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epG-X3-mnm">
+                                                    <rect key="frame" x="11" y="74" width="571" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="yiq-cD-dYz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cattle, Pigs" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZ9-OD-WKh">
+                                                    <rect key="frame" x="11" y="95" width="571" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="SeS-RY-SOj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="8Qz-N0-KEe" firstAttribute="top" secondItem="E2X-26-FsZ" secondAttribute="topMargin" constant="7" id="Bzw-as-Emv"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="GbZ-1s-sbJ" secondAttribute="bottom" constant="-6" id="FkY-bs-Mrb"/>
-                                                <constraint firstItem="GbZ-1s-sbJ" firstAttribute="leading" secondItem="E2X-26-FsZ" secondAttribute="leadingMargin" constant="10" id="Zgd-2f-C42"/>
-                                                <constraint firstItem="8Qz-N0-KEe" firstAttribute="leading" secondItem="E2X-26-FsZ" secondAttribute="leadingMargin" constant="10" id="bH3-Gf-W8l"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="GbZ-1s-sbJ" secondAttribute="trailing" constant="10" id="hAT-OG-YFG"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="8Qz-N0-KEe" secondAttribute="trailing" constant="10" id="us9-ff-Dq4"/>
-                                                <constraint firstItem="GbZ-1s-sbJ" firstAttribute="top" secondItem="8Qz-N0-KEe" secondAttribute="bottom" id="vBj-jE-dEW"/>
+                                                <constraint firstItem="VRL-cQ-ZYS" firstAttribute="top" secondItem="y6Z-Fj-MbG" secondAttribute="topMargin" id="B14-Li-whw"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="oZ9-OD-WKh" secondAttribute="bottom" id="DZX-nW-r0E"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="epG-X3-mnm" secondAttribute="trailing" constant="10" id="F8Z-4J-KJL"/>
+                                                <constraint firstItem="oZ9-OD-WKh" firstAttribute="top" secondItem="epG-X3-mnm" secondAttribute="bottom" id="IYZ-Kh-a7R"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="g77-HN-oBV" secondAttribute="trailing" constant="10" id="TWb-xd-QqD"/>
+                                                <constraint firstItem="epG-X3-mnm" firstAttribute="leading" secondItem="y6Z-Fj-MbG" secondAttribute="leadingMargin" constant="3" id="VPW-d7-8vA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="VRL-cQ-ZYS" secondAttribute="trailing" constant="10" id="Vow-wi-GUw"/>
+                                                <constraint firstItem="g77-HN-oBV" firstAttribute="top" secondItem="VRL-cQ-ZYS" secondAttribute="bottom" constant="5" id="WSN-Ri-lIX"/>
+                                                <constraint firstItem="g77-HN-oBV" firstAttribute="leading" secondItem="y6Z-Fj-MbG" secondAttribute="leadingMargin" constant="3" id="fOB-0F-ba6"/>
+                                                <constraint firstItem="oZ9-OD-WKh" firstAttribute="leading" secondItem="y6Z-Fj-MbG" secondAttribute="leadingMargin" constant="3" id="fZS-6h-mr4"/>
+                                                <constraint firstItem="VRL-cQ-ZYS" firstAttribute="leading" secondItem="y6Z-Fj-MbG" secondAttribute="leadingMargin" constant="3" id="ho4-t6-4Vm"/>
+                                                <constraint firstItem="epG-X3-mnm" firstAttribute="top" secondItem="g77-HN-oBV" secondAttribute="bottom" id="s7m-Ng-eAD"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="oZ9-OD-WKh" secondAttribute="trailing" constant="10" id="yDk-f0-sM2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="segControlCell" id="9wo-BA-UYN">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="segControlCell" rowHeight="48" id="9wo-BA-UYN">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9wo-BA-UYN" id="UNN-yn-KSh">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="5iF-qg-rfb">
-                                                    <rect key="frame" x="-3" y="8" width="606" height="29"/>
+                                                    <rect key="frame" x="-10" y="8" width="620" height="33"/>
                                                     <segments>
                                                         <segment title="Reports"/>
                                                         <segment title="Recent"/>
@@ -162,9 +179,9 @@ Cattle</string>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="5iF-qg-rfb" secondAttribute="bottom" id="NK2-Sy-fGo"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="5iF-qg-rfb" secondAttribute="trailing" constant="-11" id="Pb0-ds-Ste"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5iF-qg-rfb" secondAttribute="trailing" constant="-18" id="Pb0-ds-Ste"/>
                                                 <constraint firstItem="5iF-qg-rfb" firstAttribute="top" secondItem="UNN-yn-KSh" secondAttribute="topMargin" id="V4Y-QR-9i0"/>
-                                                <constraint firstItem="5iF-qg-rfb" firstAttribute="leading" secondItem="UNN-yn-KSh" secondAttribute="leadingMargin" constant="-11" id="ge4-3W-SmE"/>
+                                                <constraint firstItem="5iF-qg-rfb" firstAttribute="leading" secondItem="UNN-yn-KSh" secondAttribute="leadingMargin" constant="-18" id="ge4-3W-SmE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -175,11 +192,10 @@ Cattle</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L67-18-H5D">
-                                                    <rect key="frame" x="18" y="8" width="564" height="273.5"/>
+                                                    <rect key="frame" x="11" y="8" width="571" height="274"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="273.5" id="YlU-GS-OPq"/>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="273.5" id="efd-ho-36D"/>
+                                                        <constraint firstAttribute="height" constant="273.5" id="SF1-pq-wAf"/>
                                                     </constraints>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -190,7 +206,7 @@ Cattle</string>
                                                 <constraint firstItem="L67-18-H5D" firstAttribute="top" secondItem="wrI-UE-994" secondAttribute="topMargin" id="Vn4-kz-ERl"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="L67-18-H5D" secondAttribute="trailing" constant="10" id="hMd-Hq-QxD"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="L67-18-H5D" secondAttribute="bottom" constant="10" id="ocO-Bd-d4V"/>
-                                                <constraint firstItem="L67-18-H5D" firstAttribute="leading" secondItem="wrI-UE-994" secondAttribute="leadingMargin" constant="10" id="zKJ-Rz-1C1"/>
+                                                <constraint firstItem="L67-18-H5D" firstAttribute="leading" secondItem="wrI-UE-994" secondAttribute="leadingMargin" constant="3" id="zKJ-Rz-1C1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -213,6 +229,7 @@ Cattle</string>
                     <navigationItem key="navigationItem" title="Recent Report" id="Lor-J4-HbZ"/>
                     <connections>
                         <outlet property="pageTitle" destination="Lor-J4-HbZ" id="Zjw-BF-FJg"/>
+                        <outlet property="tableView" destination="QpS-JO-j3a" id="Lii-J8-JrJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="utZ-Zm-tS7" userLabel="First Responder" sceneMemberID="firstResponder"/>

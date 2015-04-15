@@ -10,6 +10,7 @@ import UIKit
 
 class RecentReportViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pageTitle: UINavigationItem!
     
     var stockyard: Yard?
@@ -19,7 +20,11 @@ class RecentReportViewController: UIViewController {
         super.viewDidLoad()
         
         navigationController?.navigationBar.topItem?.title = ""
-
+       
+        //resize cells
+        tableView.estimatedRowHeight = 89
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         // Do any additional setup after loading the view.
     }
     
