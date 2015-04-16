@@ -18,6 +18,7 @@
 		4463BB401ACC32D100ED8C7A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4463BB3E1ACC32D100ED8C7A /* LaunchScreen.xib */; };
 		4463BB4C1ACC32D100ED8C7A /* YardStockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4463BB4B1ACC32D100ED8C7A /* YardStockTests.swift */; };
 		4463BB561ACC331F00ED8C7A /* YardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4463BB551ACC331F00ED8C7A /* YardsTableViewController.swift */; };
+		C18FED901ADF100C00B3A7D6 /* InfoCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18FED8F1ADF100C00B3A7D6 /* InfoCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		4463BB4A1ACC32D100ED8C7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4463BB4B1ACC32D100ED8C7A /* YardStockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YardStockTests.swift; sourceTree = "<group>"; };
 		4463BB551ACC331F00ED8C7A /* YardsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YardsTableViewController.swift; sourceTree = "<group>"; };
+		C18FED8F1ADF100C00B3A7D6 /* InfoCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				4416604C1ACEEB3C007F82FE /* Stockyards.swift */,
 				4416604E1ACEEB8B007F82FE /* Yard.swift */,
 				4432094D1AD5B49C0077F41F /* Auction.swift */,
+				C18FED8F1ADF100C00B3A7D6 /* InfoCellTableViewCell.swift */,
 			);
 			path = YardStock;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			files = (
 				441660471ACEE6D9007F82FE /* RecentReportViewController.swift in Sources */,
 				4416604F1ACEEB8B007F82FE /* Yard.swift in Sources */,
+				C18FED901ADF100C00B3A7D6 /* InfoCellTableViewCell.swift in Sources */,
 				4463BB361ACC32D100ED8C7A /* AppDelegate.swift in Sources */,
 				4432094E1AD5B49C0077F41F /* Auction.swift in Sources */,
 				4416604D1ACEEB3C007F82FE /* Stockyards.swift in Sources */,
