@@ -17,7 +17,6 @@ class RecentReportViewController: UIViewController {
     var segSelect: Int?
     var stockyard: Yard?
     
-    //@IBOutlet weak var Title: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         segSelect = 1
