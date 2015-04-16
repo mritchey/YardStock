@@ -87,6 +87,8 @@ class RecentReportViewController: UIViewController {
                 cell!.detailTextLabel!.text = stockyard!.auctions[indexPath.row - 2].salesDate + " | " + stockyard!.auctions[indexPath.row - 2].time
             }
         }
+        cell!.setNeedsLayout()
+        cell!.layoutIfNeeded()
         
         return cell!
         

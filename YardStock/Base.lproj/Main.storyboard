@@ -83,42 +83,41 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="118" id="ljs-4D-ca3" customClass="InfoCellTableViewCell" customModule="YardStock" customModuleProvider="target">
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="152" id="ljs-4D-ca3" customClass="InfoCellTableViewCell" customModule="YardStock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="ljs-4D-ca3" id="y6Z-Fj-MbG">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arcadia Valley Livestock LLC" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRL-cQ-ZYS">
-                                                    <rect key="frame" x="11" y="8" width="571" height="46"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Arcadia Valley Livestock LLC" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRL-cQ-ZYS">
+                                                    <rect key="frame" x="11" y="8" width="571" height="81"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234 WhenPigsFly Dr." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g77-HN-oBV">
-                                                    <rect key="frame" x="11" y="59" width="571" height="15"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="15" id="g94-Dv-xub"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="St. Charles, MO" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epG-X3-mnm">
-                                                    <rect key="frame" x="11" y="74" width="571" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="yiq-cD-dYz"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="11" y="111" width="571" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cattle, Pigs" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZ9-OD-WKh">
-                                                    <rect key="frame" x="11" y="95" width="571" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Cattle, Pigs" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZ9-OD-WKh">
+                                                    <rect key="frame" x="11" y="128" width="571" height="16"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="15" id="SeS-RY-SOj"/>
+                                                        <constraint firstAttribute="width" constant="571" id="SzJ-jS-pma"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="SzJ-jS-pma"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234 WhenPigsFly Dr." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g77-HN-oBV">
+                                                    <rect key="frame" x="11" y="94" width="571" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -126,8 +125,14 @@
                                             <constraints>
                                                 <constraint firstItem="VRL-cQ-ZYS" firstAttribute="top" secondItem="y6Z-Fj-MbG" secondAttribute="topMargin" id="B14-Li-whw"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="oZ9-OD-WKh" secondAttribute="bottom" id="DZX-nW-r0E"/>
+                                                <constraint firstItem="epG-X3-mnm" firstAttribute="top" secondItem="g77-HN-oBV" secondAttribute="bottom" id="ETI-bN-q8V"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="epG-X3-mnm" secondAttribute="trailing" constant="10" id="F8Z-4J-KJL"/>
                                                 <constraint firstItem="oZ9-OD-WKh" firstAttribute="top" secondItem="epG-X3-mnm" secondAttribute="bottom" id="IYZ-Kh-a7R"/>
+                                                <constraint firstItem="epG-X3-mnm" firstAttribute="top" secondItem="g77-HN-oBV" secondAttribute="bottom" id="JsQ-FN-xpg"/>
+                                                <constraint firstItem="oZ9-OD-WKh" firstAttribute="top" secondItem="epG-X3-mnm" secondAttribute="bottom" id="LgY-tw-onP"/>
+                                                <constraint firstItem="oZ9-OD-WKh" firstAttribute="top" secondItem="epG-X3-mnm" secondAttribute="bottom" id="OmW-eP-c3l"/>
+                                                <constraint firstItem="oZ9-OD-WKh" firstAttribute="top" secondItem="epG-X3-mnm" secondAttribute="bottom" id="PIo-Ib-2dw"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="oZ9-OD-WKh" secondAttribute="bottom" id="SDU-0S-MXl"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="g77-HN-oBV" secondAttribute="trailing" constant="10" id="TWb-xd-QqD"/>
                                                 <constraint firstItem="epG-X3-mnm" firstAttribute="leading" secondItem="y6Z-Fj-MbG" secondAttribute="leadingMargin" constant="3" id="VPW-d7-8vA"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="VRL-cQ-ZYS" secondAttribute="trailing" constant="10" id="Vow-wi-GUw"/>
@@ -135,9 +140,29 @@
                                                 <constraint firstItem="g77-HN-oBV" firstAttribute="leading" secondItem="y6Z-Fj-MbG" secondAttribute="leadingMargin" constant="3" id="fOB-0F-ba6"/>
                                                 <constraint firstItem="oZ9-OD-WKh" firstAttribute="leading" secondItem="y6Z-Fj-MbG" secondAttribute="leadingMargin" constant="3" id="fZS-6h-mr4"/>
                                                 <constraint firstItem="VRL-cQ-ZYS" firstAttribute="leading" secondItem="y6Z-Fj-MbG" secondAttribute="leadingMargin" constant="3" id="ho4-t6-4Vm"/>
+                                                <constraint firstItem="g77-HN-oBV" firstAttribute="top" secondItem="VRL-cQ-ZYS" secondAttribute="bottom" constant="5" id="jyk-0C-Zqt"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="oZ9-OD-WKh" secondAttribute="bottom" id="nDE-NF-Kaf"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="oZ9-OD-WKh" secondAttribute="bottom" id="pJM-od-cQB"/>
                                                 <constraint firstItem="epG-X3-mnm" firstAttribute="top" secondItem="g77-HN-oBV" secondAttribute="bottom" id="s7m-Ng-eAD"/>
+                                                <constraint firstItem="g77-HN-oBV" firstAttribute="top" secondItem="VRL-cQ-ZYS" secondAttribute="bottom" constant="5" id="sz0-A9-vUz"/>
+                                                <constraint firstItem="oZ9-OD-WKh" firstAttribute="bottom" secondItem="y6Z-Fj-MbG" secondAttribute="bottomMargin" id="wi7-h4-Oum"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="oZ9-OD-WKh" secondAttribute="trailing" constant="10" id="yDk-f0-sM2"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="WSN-Ri-lIX"/>
+                                                    <exclude reference="sz0-A9-vUz"/>
+                                                    <exclude reference="JsQ-FN-xpg"/>
+                                                    <exclude reference="s7m-Ng-eAD"/>
+                                                    <exclude reference="DZX-nW-r0E"/>
+                                                    <exclude reference="IYZ-Kh-a7R"/>
+                                                    <exclude reference="OmW-eP-c3l"/>
+                                                    <exclude reference="PIo-Ib-2dw"/>
+                                                    <exclude reference="nDE-NF-Kaf"/>
+                                                    <exclude reference="pJM-od-cQB"/>
+                                                    <exclude reference="wi7-h4-Oum"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="addressLabel" destination="g77-HN-oBV" id="0wf-kx-Ri0"/>
@@ -184,7 +209,7 @@
 
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="273.5" id="SF1-pq-wAf"/>
+                                                        <constraint firstAttribute="height" constant="274" id="iCZ-Gt-7xU"/>
                                                     </constraints>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
