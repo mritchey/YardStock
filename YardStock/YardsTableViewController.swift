@@ -57,6 +57,9 @@ class YardsTableViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         selectedYard = stockyards.yards[indexPath.row]
         performSegueWithIdentifier("toStockyard", sender: self)
+        
+        //unhighlight selected cell upon return to stockyard page
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
