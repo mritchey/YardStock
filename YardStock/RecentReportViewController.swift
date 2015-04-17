@@ -67,8 +67,12 @@ class RecentReportViewController: UIViewController {
             let infoCell = tableView.dequeueReusableCellWithIdentifier("infoCell", forIndexPath: indexPath) as? InfoCellTableViewCell
             infoCell?.stockyardNameLabel.text = stockyard!.name
             infoCell?.addressLabel.text = stockyard!.address + ", " + stockyard!.city
+            infoCell?.addressLabel.textColor = UIColor.grayColor()
             infoCell?.phoneLabel.text = stockyard!.contact
+            infoCell?.phoneLabel.textColor = UIColor.grayColor()
             infoCell?.livestockLabel.text = stockyard!.auctions[0].livestock
+            infoCell?.livestockLabel.textColor = UIColor.grayColor()
+            
             cell = infoCell
             cell?.separatorInset = UIEdgeInsetsMake(0, 999, 0, 0)
         }
@@ -85,13 +89,21 @@ class RecentReportViewController: UIViewController {
             }
             else if segSelect == 0 {
                 cell = tableView.dequeueReusableCellWithIdentifier("pastReportsCell", forIndexPath: indexPath) as? UITableViewCell
+                
+                cell!.detailTextLabel?.textColor = UIColor.grayColor()
             }
             else if segSelect == 2 {
                 cell = tableView.dequeueReusableCellWithIdentifier("upcomingAuctionsCell", forIndexPath: indexPath) as? UITableViewCell
                 cell!.textLabel!.text = stockyard!.auctions[indexPath.row - 2].livestock
                 cell!.detailTextLabel!.text = stockyard!.auctions[indexPath.row - 2].salesDate + " | " + stockyard!.auctions[indexPath.row - 2].time
+                
+                //wrap cell text
                 cell!.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
                 cell!.textLabel?.numberOfLines = 0
+                cell!.detailTextLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+                cell!.detailTextLabel?.numberOfLines = 0
+                
+                cell!.detailTextLabel?.textColor = UIColor.grayColor()
             }
         }
         

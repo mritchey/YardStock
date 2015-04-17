@@ -48,6 +48,7 @@ class YardsTableViewController: UIViewController, UITableViewDataSource, UITable
         let cell = tableView.dequeueReusableCellWithIdentifier(prototypeCellIdentifier) as! UITableViewCell
         cell.textLabel?.text = stockyards.yards[indexPath.row].name
         cell.detailTextLabel?.text = stockyards.yards[indexPath.row].city + ", MO"
+        cell.detailTextLabel?.textColor = UIColor.grayColor()
         //code to set cell info
         
         return cell
