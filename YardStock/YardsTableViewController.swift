@@ -19,6 +19,8 @@ class YardsTableViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.topItem?.title = "Stockyards"
+        
         stockyards.load(urlString) {
             (companies, errorString) -> Void in
             if let unwrappedErrorString = errorString {
@@ -70,5 +72,9 @@ class YardsTableViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     @IBAction func returnToYardList(segue: UIStoryboardSegue) {
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        navigationController?.navigationBar.topItem?.title = "Stockyards"
     }
 }
