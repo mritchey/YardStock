@@ -90,6 +90,8 @@ class RecentReportViewController: UIViewController {
                 cell = tableView.dequeueReusableCellWithIdentifier("upcomingAuctionsCell", forIndexPath: indexPath) as? UITableViewCell
                 cell!.textLabel!.text = stockyard!.auctions[indexPath.row - 2].livestock
                 cell!.detailTextLabel!.text = stockyard!.auctions[indexPath.row - 2].salesDate + " | " + stockyard!.auctions[indexPath.row - 2].time
+                cell!.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+                cell!.textLabel?.numberOfLines = 0
             }
         }
         
