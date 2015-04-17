@@ -12,9 +12,9 @@
 			"auctions": 
 			[
 				{"sale date": "Tuesday", "time": "10:30 a.m.", "livestock": "Cattle"},
-				{"sale date": "fourth Thursday of each month", "time": "5:00 p.m.", "livestock": "Swine, Sheep, Goats, Poultry, Small Animal"},
-				{"sale date": "second Saturday of each month", "time": "8:30 a.m.","livestock": "Tack"},
-				{"sale date": "second Saturday of each month", "time": "9:00 a.m.","livestock": "Equine"}
+				{"sale date": "Fourth Thursday of Each Month", "time": "5:00 p.m.", "livestock": "Swine, Sheep, Goats, Poultry, Small Animal"},
+				{"sale date": "Second Saturday of Each Month", "time": "8:30 a.m.","livestock": "Tack"},
+				{"sale date": "Second Saturday of Each Month", "time": "9:00 a.m.","livestock": "Equine"}
 			]
 		},
 		{
@@ -393,7 +393,7 @@
 			"contact": "(660) 564-3454",
 			"auctions": 
 			[
-				{"sale date": "second Saturday of each month", "time": "Contact for Time","livestock": "Equine, Goats"},
+				{"sale date": "Second Saturday of Each Month", "time": "Contact for Time","livestock": "Equine, Goats"},
 				{"sale date": "fourth Saturday of each month", "time": "Contact for Time","livestock": "Equine, Goats"}
 			]
 		},
@@ -623,9 +623,9 @@
 			"contact": "(573) 473-6314",
 			"auctions": 
 			[
-				{"sale date": "second Saturday of each month", "time": "10:30 a.m.", "livestock": "Miscellaneous"},
+				{"sale date": "Second Saturday of Each Month", "time": "10:30 a.m.", "livestock": "Miscellaneous"},
 				{"sale date": "fourth Saturday of each month", "time": "10:30 a.m.","livestock": "Miscellaneous"},
-				{"sale date": "second Saturday of each month", "time": "12:00 p.m.", "livestock": "All Livestock"},
+				{"sale date": "Second Saturday of Each Month", "time": "12:00 p.m.", "livestock": "All Livestock"},
 				{"sale date": "fourth Saturday of each month", "time": "12:00 p.m.","livestock": "All Livestock"},
 				{"sale date": "second Thursday of each month", "time": "6:00 p.m.", "livestock": "Sheep, Goats"},
 				{"sale date": "first Friday of each month", "time": "6:00 p.m.","livestock": "Equine"}
@@ -738,7 +738,7 @@
 			"contact": "(573) 380-2392",
 			"auctions": 
 			[
-				{"sale date": "second Saturday of each month", "time": "6:00 p.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"},
+				{"sale date": "Second Saturday of Each Month", "time": "6:00 p.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"},
 				{"sale date": "fourth Saturday of each month", "time": "6:00 p.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"}
 			]
 		},
@@ -823,7 +823,7 @@
 			"contact": "(660) 413-3250",
 			"auctions": 
 			[
-				{"sale date": "second Saturday of each month", "time": "12:00 p.m.", "livestock": "Equine, Sheep, Goats, Poultry"}
+				{"sale date": "Second Saturday of Each Month", "time": "12:00 p.m.", "livestock": "Equine, Sheep, Goats, Poultry"}
 			]
 		},
 		{
@@ -892,7 +892,7 @@
 			"contact":"(417) 498-6414",
 			"auctions": 
 			[
-				{"sale date": "second Saturday of each month", "time": "Contact for Time", "livestock": "Poultry"}
+				{"sale date": "Second Saturday of Each Month", "time": "Contact for Time", "livestock": "Poultry"}
 			]
 		},
 		{

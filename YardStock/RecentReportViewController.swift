@@ -29,7 +29,6 @@ class RecentReportViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         
         // Do any additional setup after loading the view.
-//        InfoCellTableViewCell.nameLabel = stockyard.name
         
     }
     
@@ -61,6 +60,9 @@ class RecentReportViewController: UIViewController {
         
         var cell: UITableViewCell?
         
+        //remove separators for unused cells
+        tableView.tableFooterView = UIView(frame:CGRectZero)
+        
         if indexPath.row == 0 {
             let infoCell = tableView.dequeueReusableCellWithIdentifier("infoCell", forIndexPath: indexPath) as? InfoCellTableViewCell
             infoCell?.stockyardNameLabel.text = stockyard!.name
@@ -68,15 +70,18 @@ class RecentReportViewController: UIViewController {
             infoCell?.phoneLabel.text = stockyard!.contact
             infoCell?.livestockLabel.text = stockyard!.auctions[0].livestock
             cell = infoCell
+            cell?.separatorInset = UIEdgeInsetsMake(0, 999, 0, 0)
         }
         
         else if indexPath.row == 1 {
             cell = tableView.dequeueReusableCellWithIdentifier("segControlCell", forIndexPath: indexPath) as? UITableViewCell
+            cell?.separatorInset = UIEdgeInsetsMake(0, 999, 0, 0)
         }
         
         else if indexPath.row >= 2 {
             if segSelect == 1 {
                 cell = tableView.dequeueReusableCellWithIdentifier("reportCell", forIndexPath: indexPath) as? UITableViewCell
+                cell?.separatorInset = UIEdgeInsetsMake(0, 999, 0, 0)
             }
             else if segSelect == 0 {
                 cell = tableView.dequeueReusableCellWithIdentifier("pastReportsCell", forIndexPath: indexPath) as? UITableViewCell
@@ -87,12 +92,12 @@ class RecentReportViewController: UIViewController {
                 cell!.detailTextLabel!.text = stockyard!.auctions[indexPath.row - 2].salesDate + " | " + stockyard!.auctions[indexPath.row - 2].time
             }
         }
+        
         cell!.setNeedsLayout()
         cell!.layoutIfNeeded()
         
         return cell!
-        
-        
+
     }
     
 
