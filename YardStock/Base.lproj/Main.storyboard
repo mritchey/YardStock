@@ -298,10 +298,10 @@
             </objects>
             <point key="canvasLocation" x="2123" y="422"/>
         </scene>
-        <!--View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="ZM8-tb-t9K">
             <objects>
-                <viewController id="nHz-MF-lOJ" sceneMemberID="viewController">
+                <viewController id="nHz-MF-lOJ" customClass="UITableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2TT-0F-6wv"/>
                         <viewControllerLayoutGuide type="bottom" id="vGv-0u-gbr"/>
