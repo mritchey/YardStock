@@ -16,7 +16,7 @@
 				{"sale date": "Second Saturday of Each Month", "time": "8:30 a.m.","livestock": "Tack"},
 				{"sale date": "Second Saturday of Each Month", "time": "9:00 a.m.","livestock": "Equine"}
 			],
-            "livestock": "Swine, Sheep, Goats, Poultry, Small Animals, Tack, Equine"
+            "livestock": "Cattle, Swine, Sheep, Goats, Poultry, Small Animals, Tack, Equine"
 		},
 		{
 			"id": 1102,

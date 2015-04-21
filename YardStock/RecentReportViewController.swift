@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecentReportViewController: UIViewController {
+class RecentReportViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pageTitle: UINavigationItem!
@@ -71,7 +71,7 @@ class RecentReportViewController: UIViewController {
             infoCell?.addressLabel.textColor = UIColor.grayColor()
             infoCell?.phoneLabel.text = stockyard!.contact
             infoCell?.phoneLabel.textColor = UIColor.grayColor()
-            infoCell?.livestockLabel.text = stockyard!.auctions[0].livestock
+            infoCell?.livestockLabel.text = stockyard!.livestock
             infoCell?.livestockLabel.textColor = UIColor.grayColor()
             
             cell = infoCell
@@ -114,8 +114,11 @@ class RecentReportViewController: UIViewController {
         return cell!
 
     }
+    //View report
+//    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+//        performSegueWithIdentifier("toReportView", sender: self)
+//    }
     
-
     @IBAction func segChanged(sender: AnyObject) {
         let segControl = sender as! UISegmentedControl
         let selected = segControl.selectedSegmentIndex
