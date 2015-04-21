@@ -17,13 +17,15 @@ class Yard: NSObject {
     var city: String
     var contact: String
     var auctions = Array<Auction>()
+    var livestock: String
 
-    init(name: String, lat:CLLocationDegrees, long:CLLocationDegrees, address: String, city: String, contact: String){
+    init(name: String, lat:CLLocationDegrees, long:CLLocationDegrees, address: String, city: String, contact: String, livestock: String){
         self.name = name
         self.lat = lat
         self.long = long
         self.address = address
         self.city = city
         self.contact = contact
+        self.livestock = livestock
     }
 }

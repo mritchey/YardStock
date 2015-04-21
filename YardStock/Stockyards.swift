@@ -31,30 +31,24 @@ class Stockyards: NSObject {
             if (jsonResult.count > 0){
                 if let stockyards = jsonResult["data"] as? NSArray {
                     for ListOYards in stockyards {
-                        if let yardName = ListOYards["name"] as? String{
-                            if let yardLat = ListOYards["lat"] as? CLLocationDegrees{
-                                if let yardLong = ListOYards["long"] as? CLLocationDegrees{
-                                    if let yardAddress = ListOYards["address"] as? String{
-                                        if let yardCity = ListOYards["city"] as? String{
-                                            if let yardContact = ListOYards["contact"] as? String{
-                                                let yard = Yard(name: yardName, lat: yardLat, long: yardLong, address: yardAddress, city: yardCity, contact: yardContact)
-                                                yards.append(yard)
-                                                if let yardAuctions = ListOYards["auctions"] as? NSArray{
-                                                    for yardAuction in yardAuctions{
-                                                        if let saleDate = yardAuction["sale date"] as? String{
-                                                            if let time = yardAuction["time"] as? String{
-                                                                if let livestock = yardAuction["livestock"] as? String{
-                                                                    yard.auctions.append(Auction(salesDate: saleDate, time: time, livestock: livestock))
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
+                        if let yardName = ListOYards["name"] as? String,
+                            yardLat = ListOYards["lat"] as? CLLocationDegrees,
+                            yardLong = ListOYards["long"] as? CLLocationDegrees,
+                            yardAddress = ListOYards["address"] as? String,
+                            yardCity = ListOYards["city"] as? String,
+                            yardContact = ListOYards["contact"] as? String,
+                            yardLivestock = ListOYards["livestock"] as? String{
+                                let yard = Yard(name: yardName, lat: yardLat, long: yardLong, address: yardAddress, city: yardCity, contact: yardContact, livestock: yardLivestock)
+                                yards.append(yard)
+                                if let yardAuctions = ListOYards["auctions"] as? NSArray{
+                                    for yardAuction in yardAuctions{
+                                        if let saleDate = yardAuction["sale date"] as? String,
+                                            time = yardAuction["time"] as? String,
+                                            livestock = yardAuction["livestock"] as? String{
+                                                yard.auctions.append(Auction(salesDate: saleDate, time: time, livestock: livestock))
                                         }
                                     }
                                 }
-                            }
                         }
                     }
                 }
