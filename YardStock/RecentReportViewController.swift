@@ -13,6 +13,7 @@ class RecentReportViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pageTitle: UINavigationItem!
 
+    var pageTopTitle = "Recent Report"
     var rowsAdded: [NSIndexPath] = []
     var segSelect: Int?
     var stockyard: Yard?
@@ -122,7 +123,8 @@ class RecentReportViewController: UIViewController {
         var auctions: [NSIndexPath] = []
         
         if selected == 0 {
-            pageTitle.title = "Past Reports"
+            pageTopTitle = "Past Reports"
+            pageTitle.title = pageTopTitle
             segSelect = 0
             tableView.beginUpdates()
             tableView.deleteRowsAtIndexPaths(rowsAdded, withRowAnimation: .Fade)
@@ -131,7 +133,8 @@ class RecentReportViewController: UIViewController {
             rowsAdded = [NSIndexPath(forRow: 2, inSection: 0)]
         }
         else if selected == 1 {
-            pageTitle.title = "Recent Report"
+            pageTopTitle = "Recent Report"
+            pageTitle.title = pageTopTitle
             segSelect = 1
             tableView.beginUpdates()
             tableView.deleteRowsAtIndexPaths(rowsAdded, withRowAnimation: .Fade)
@@ -140,7 +143,8 @@ class RecentReportViewController: UIViewController {
             rowsAdded = [NSIndexPath(forRow: 2, inSection: 0)]
         }
         else if selected == 2 {
-            pageTitle.title = "Upcoming Auctions"
+            pageTopTitle = "Upcoming Auctions"
+            pageTitle.title = pageTopTitle
             segSelect = 2
             tableView.beginUpdates()
             tableView.deleteRowsAtIndexPaths(rowsAdded, withRowAnimation: .Fade)
@@ -152,7 +156,10 @@ class RecentReportViewController: UIViewController {
             tableView.insertRowsAtIndexPaths(auctions, withRowAnimation: .Top)
             tableView.endUpdates()
             rowsAdded = auctions
+        
         }
     }
-    
+    override func viewDidAppear(animated: Bool) {
+        pageTitle.title = pageTopTitle
+    }
 }

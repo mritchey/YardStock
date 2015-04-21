@@ -11,6 +11,7 @@ import UIKit
 class YardsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var StockyardsTable: UITableView!
+    
     let prototypeCellIdentifier = "cell"
     var stockyards: Stockyards = Stockyards()
     var selectedYard: Yard?
@@ -18,8 +19,6 @@ class YardsTableViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.navigationBar.topItem?.title = "Stockyards"
         
         stockyards.load(urlString) {
             (companies, errorString) -> Void in

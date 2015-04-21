@@ -12,10 +12,11 @@
 			"auctions": 
 			[
 				{"sale date": "Tuesdays", "time": "10:30 a.m.", "livestock": "Cattle"},
-				{"sale date": "Fourth Thursday of Each Month", "time": "5:00 p.m.", "livestock": "Swine, Sheep, Goats, Poultry, Small Animal"},
+				{"sale date": "Fourth Thursday of Each Month", "time": "5:00 p.m.", "livestock": "Swine, Sheep, Goats, Poultry, Small Animals"},
 				{"sale date": "Second Saturday of Each Month", "time": "8:30 a.m.","livestock": "Tack"},
 				{"sale date": "Second Saturday of Each Month", "time": "9:00 a.m.","livestock": "Equine"}
-			]
+			],
+            "livestock": "Swine, Sheep, Goats, Poultry, Small Animals, Tack, Equine"
 		},
 		{
 			"id": 1102,
@@ -28,7 +29,8 @@
 			"auctions": 
 			[
 				{"sale date":  "Third Saturday of Each Month", "time":  "Contact for Time", "livestock":  "Goats, Sheep"}
-			]
+			],
+            "livestock": "Goats, Sheep"
 		},
 		{
 			"id": 1104,
@@ -41,7 +43,8 @@
 			"auctions": 
 			[
 				{"sale date": "Fridays", "time":  "10:00 a.m.", "livestock":  "Poultry"},
-			]
+			],
+            "livestock": "Poultry"
 		},
 		{
 			"id": 1105,
@@ -57,7 +60,8 @@
 				{"sale date": "Third Friday of Each Month", "time": "6:00 p.m.","livestock": "Tack"},
 				{"sale date": "Third Friday of Each Month", "time": "6:30 p.m.", "livestock": "Equine"},
 				{"sale date": "First Sunday of Each Month", "time": "1:00 p.m.", "livestock": "Small Animals"},
-			]
+			],
+            "livestock": "Sheep, Goats, Tack, Equine, Small Animals"
 		},
 		{
 			"id": 1106,
@@ -70,7 +74,8 @@
 			"auctions": 
 			[
 				{"sale date": "Mondays", "time": "11:00 a.m.", "livestock": "Equine, Swine, Sheep, Goats, Cattle"}
-			]
+			],
+            "livestock": "Equine, Swine, Sheep, Goats, Cattle"
 		},
 		{
 			"id": 1107,
@@ -83,7 +88,8 @@
 			"auctions": 
 			[
 				{"sale date": "Saturdays", "time": "2:00 p.m.", "livestock": "Cattle, Swine, Sheep, Goats, Exotic, Poultry, Equine"}
-			]
+			],
+            "livestock": "Cattle, Swine, Sheep, Goats, Exotic, Poultry, Equine"
 		},
 		{
 			"id": 1108,
@@ -96,7 +102,8 @@
 			"auctions": 
 			[
 				{"sale date": "Saturdays quarterly", "time": "1:00 p.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats"}
-			]
+			],
+            "livestock": "Cattle, Equine, Swine, Sheep, Goats"
 		},
 		{
 			"id": 1109,
@@ -109,7 +116,8 @@
 			"auctions": 
 			[
 				{"sale date": "Last Saturday of Each Month", "time": "9:00 a.m.", "livestock": "Sheep, Goats"}
-			]
+			],
+            "livestock": "Sheep, Goats"
 		},
 		{
 			"id": 1110,
@@ -124,7 +132,8 @@
 				{"sale date": "Saturdays", "time": "12:00 p.m.", "livestock": "Cattle"},
 				{"sale date": "Third Tuesday of Each Month", "time": "6:30 p.m.","livestock": "Stock Cattle"},
 				{"sale date": "Fourth Thursday of Each Month", "time": "6:00 p.m.","livestock": "Sheep, Swine, Goat"}
-			]
+			],
+            "livestock": "Cattle, Stock Cattle, Sheep, Swine, Goat"
 		},
 		{
 			"id": 1111,
@@ -139,7 +148,8 @@
 				{"sale date": "Mondays", "time": "10:00 a.m.", "livestock": "Cattle"},
 				{"sale date": "Mondays", "time": "12:30 a.m.","livestock": "Cattle, Feeder Calf"},
 				{"sale date": "First Thursday of Each Month", "time": "6:00 p.m.","livestock": "Cattle"}
-			]
+			],
+            "livestock": "Cattle, Feeder Calf"
 		},
 		{
 			"id": 1112,
@@ -152,7 +162,8 @@
 			"auctions": 
 			[
 				{"sale date": "Saturdays", "time": "10:30 a.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"}
-			]
+			],
+            "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"
 		},
 		{
 			"id": 1113,
@@ -165,7 +176,8 @@
 			"auctions": 
 			[
 				{"sale date": "Mondays", "time": "6:00 p.m.", "livestock": "Cattle"}
-			]
+			],
+            "livestock": "Cattle"
 		},
 		{
 			"id": 1114,
@@ -181,7 +193,8 @@
 				{"sale date": "Second Saturday of June", "time": "Contact for Time","livestock": "Sheep, Goats, Poultry"},
 				{"sale date": "Second Saturday of August", "time": "Contact for Time", "livestock": "Sheep, Goats, Poultry"},
 				{"sale date": "Second Saturday of October", "time": "Contact for Time","livestock": "Sheep, Goats, Poultry"}
-			]
+			],
+            "livestock": "Sheep, Goats, Poultry"
 		},
 		{
 			"id": 1115,
@@ -194,7 +207,8 @@
 			"auctions": 
 			[
 				{"sale date": "Monthly", "time": "Contact for Time", "livestock": "Poultry"}
-			]
+			],
+            "livestock": "Poultry"
 		},
 		{
 			"id": 1116,
@@ -208,7 +222,8 @@
 			[
 				{"sale date": "Sundays", "time": "2:00 p.m.", "livestock": "All Livestock"},
 				{"sale date": "Fourth Friday of Each Month", "time": "6:00 p.m.","livestock": "All Livestock"}
-			]
+			],
+            "livestock": "All Livestock"
 		},
 		{
 			"id": 1117,
@@ -223,7 +238,8 @@
 				{"sale date": "First Friday of Each Month", "time": "5:00 p.m.", "livestock": "Equine"},
 				{"sale date": "Third Monday of Each Month", "time": "5:00 p.m.","livestock": "Equine"},
 				{"sale date": "Third Thursday of Each Month", "time": "1:00 p.m.","livestock": "Sheep, Goats"}
-			]
+			],
+            "livestock": "Equine, Sheeps, Goats"
 		},
 		{
 			"id": 1118,
@@ -236,7 +252,8 @@
 			"auctions": 
 			[
 				{"sale date": "Thursdays", "time": "12:30 p.m.", "livestock": "Cattle"}
-			]
+			],
+            "livestock": "Cattle"
 		},
 		{
 			"id": 1119,
@@ -249,7 +266,8 @@
 			"auctions": 
 			[
 				{"sale date": "Fridays", "time": "9:30 a.m.", "livestock": "Cattle, Equine"},
-			]
+			],
+            "livestock": "Cattle, Equine"
 		},
 		{
 			"id": 1120,
@@ -262,7 +280,8 @@
 			"auctions": 
 			[
 				{"sale date": "Fridays", "time": "12:00 a.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry, Exotic"},
-			]
+			],
+            "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry, Exotic"
 		},
 		{
 			"id": 1121,
@@ -280,7 +299,8 @@
 				{"sale date": "Thursdays", "time": "8:30 p.m.", "livestock": "Cattle"},
 				{"sale date": "Fridays", "time": "8:30 p.m.", "livestock": "Cattle"},
 				{"sale date": "Saturdays", "time": "8:30 p.m.", "livestock": "Cattle"}
-			]
+			],
+            "livestock": "Cattle"
 		},
 		{
 			"id": 1122,
@@ -293,7 +313,8 @@
 			"auctions": 
 			[
 				{"sale date": "Mondays", "time": "9:00 a.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry, Exotics"}
-			]
+			],
+            "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry, Exotics"
 		},
 		{
 			"id": 1123,
@@ -313,7 +334,8 @@
 				{"sale date": "First Saturday of February", "time": "1:00 p.m.","livestock": "Cattle, Swine, Sheep, Goats"},
 				{"sale date": "First Saturday of March", "time": "1:00 p.m.","livestock": "Cattle, Swine, Sheep, Goats"},
 				{"sale date": "First Saturday of April", "time": "1:00 p.m.","livestock": "Cattle, Swine, Sheep, Goats"}
-			]
+			],
+            "livestock": "Cattle, Swine, Sheep, Goats"
 		},
 		{
 			"id": 1124,
@@ -327,7 +349,8 @@
 			[
 				{"sale date": "Tuesdays", "time": "12:30 p.m.", "livestock": "Cattle, Goats, Sheep, Swine"},
 				{"sale date": "Fourth Tuesday of Each Month", "time": "11:00 a.m.","livestock": "Feeder Pig, Goats, Sheep, Cattle"}
-			]
+			],
+            "livestock": "Feeder Pig, Goats, Sheep, Swine, Cattle"
 		},
 		{
 			"id": 1125,
@@ -340,7 +363,8 @@
 			"auctions": 
 			[
 				{"sale date": "Mondays", "time": "11:00 a.m.", "livestock": "Cattle, Equine, Sheep, Goats"}
-			]
+			],
+            "livestock": "Cattle, Equine, Sheep, Goats"
 		},
 		{
 			"id": 1126,
@@ -353,7 +377,8 @@
 			"auctions": 
 			[
 				{"sale date": "Tuesdays", "time": "11:00 a.m.", "livestock": "Cattle"}
-			]
+			],
+            "livestock": "Cattle"
 		},
 		{
 			"id": 1127,
@@ -366,7 +391,8 @@
 			"auctions": 
 			[
 				{"sale date": "Once or Twice per Year on Saturday", "time": "Contact for Time", "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"}
-			]
+			],
+            "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"
 		},
 		{
 			"id": 1128,
@@ -381,7 +407,8 @@
 				{"sale date": "Wednesdays", "time": "Contact for Time", "livestock": "Cattle"},
 				{"sale date": "First Saturday of Each Month", "time": "Contact for Time","livestock": "Swine, Sheep, Goats"},
 				{"sale date": "Third Saturday of Each Month", "time": "Contact for Time","livestock": "Swine, Sheep, Goats"}
-			]
+			],
+            "livestock": "Swine, Sheep, Goats"
 		},
 		{
 			"id": 1129,
@@ -395,7 +422,8 @@
 			[
 				{"sale date": "Second Saturday of Each Month", "time": "Contact for Time","livestock": "Equine, Goats"},
 				{"sale date": "Fourth Saturday of Each Month", "time": "Contact for Time","livestock": "Equine, Goats"}
-			]
+			],
+            "livestock": "Equine, Goats"
 		},
 		{
 			"id": 1130,
@@ -408,7 +436,8 @@
 			"auctions": 
 			[
 				{"sale date": "Biweekly Wednesday", "time": "10:00 a.m.", "livestock": "Cattle"}
-			]
+			],
+            "livestock": "Cattle"
 		},
 		{
 			"id": 1131,
@@ -421,7 +450,8 @@
 			"auctions": 
 			[
 				{"sale date": "Tuesdays", "time": "1:00 p.m.", "livestock": "Cattle"}
-			]
+			],
+            "livestock": "Cattle"
 		},
 		{
 			"id": 1132,
@@ -434,7 +464,8 @@
 			"auctions": 
 			[
 				{"sale date": "Quarterly Saturday", "time": "6:00 p.m.", "livestock": "Poultry"}
-			]
+			],
+            "livestock": "Poultry"
 		},
 		{
 			"id": 1133,
@@ -449,7 +480,8 @@
 				{"sale date": "Saturdays", "time": "11:00 a.m.", "livestock": "Cattle"},
 				{"sale date": "First Saturday of Each Month", "time": "2:00 p.m.","livestock": "Equine, Swine, Sheep, Goats, Exotic, Poultry"},
 				{"sale date": "Third Saturday of Each Month", "time": "2:00 p.m.","livestock": "Equine, Swine, Sheep, Goats, Exotic, Poultry"}
-			]
+			],
+            "livestock": "Cattle, Equine, Swine, Sheep, Goats, Exotic, Poultry"
 		},
 		{
 			"id": 1134,
@@ -463,7 +495,8 @@
 			[
 				{"sale date": "Mondays", "time": "6:00 a.m.", "livestock": "Cattle"},
 				{"sale date": "Wednesdays", "time": "9:00 a.m.","livestock": "Cattle"}
-			]
+			],
+            "livestock": "Cattle"
 		},
 		{
 			"id": 1135,
@@ -476,7 +509,8 @@
 			"auctions": 
 			[
 				{"sale date": "Mondays", "time": "9:30 a.m.", "livestock": "Cattle, Swine, Sheep, Goats"}
-			]
+			],
+            "livestock": "Cattle, Swine, Sheep, Goats"
 		},
 		{
 			"id": 1136,
@@ -489,7 +523,8 @@
 			"auctions": 
 			[
 				{"sale date": "Saturdays", "time": "11:00 a.m.", "livestock": "Cattle, Sheep, Goats"}
-			]
+			],
+            "livestock": "Cattle, Sheep, Goats"
 		},
 		{
 			"id": 1137,
@@ -502,7 +537,8 @@
 			"auctions": 
 			[
 				{"sale date": "Thursdays", "time": "11:00 a.m.", "livestock": "Cattle, Equine, Sheep, Goats, Swine"}
-			]
+			],
+            "livestock": "Cattle, Equine, Sheep, Goats, Swine"
 		},
 		{
 			"id": 1138,
@@ -516,7 +552,8 @@
 			[
 				{"sale date": "First Saturday of Each Month", "time": "11:00 a.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats, Exotic, Poultry"},
 				{"sale date": "Third Saturday of Each Month", "time": "11:00 a.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats, Exotic, Poultry"}
-			]
+			],
+            "livestock": "Cattle, Equine, Swine, Sheep, Goats, Exotic, Poultry"
 		},
 		{
 			"id": 1139,
@@ -531,7 +568,8 @@
 				{"sale date": "Tuesdays", "time": "11:00 a.m.", "livestock": "Cattle"},
 				{"sale date": "First Saturday of Each Month", "time": "9:00 a.m.","livestock": "Tack"},
 				{"sale date": "First Saturday of Each Month", "time": "12:00 p.m.","livestock": "Equine"}
-			]
+			],
+            "livestock": "Cattle, Tack, Equine"
 		},
 		{
 			"id": 1140,
@@ -544,7 +582,8 @@
 			"auctions": 
 			[
 				{"sale date": "Tuesdays", "time": "12:30 p.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"}
-			]
+			],
+            "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"
 		},
 		{
 			"id": 1141,
@@ -557,7 +596,8 @@
 			"auctions": 
 			[
 				{"sale date": "Thursdays", "time": "12:00 p.m.", "livestock": "Cattle, Swine, Sheep, Goats, Poultry"}
-			]
+			],
+            "livestock": "Cattle, Swine, Sheep, Goats, Poultry"
 		},
 		{
 			"id": 1142,
@@ -571,7 +611,8 @@
 			[
 				{"sale date": "Biweekly Fridays", "time": "10:30 a.m.", "livestock": "Cattle, Sheep, Goats"},
 				{"sale date": "Mondays", "time": "10:00 a.m.","livestock": "Cattle"}
-			]
+			],
+            "livestock": "Cattle, Sheep, Goats"
 		},
 		{
 			"id": 1143,
@@ -584,7 +625,8 @@
 			"auctions": 
 			[
 				{"sale date": "Once a Month on Wednesday", "time": "6:00 p.m.", "livestock": "Goats, Sheep, Small Animal, Equine"}
-			]
+			],
+            "livestock": "Goats, Sheep, Small Animal, Equine"
 		},
 		{
 			"id": 1144,
@@ -597,7 +639,8 @@
 			"auctions": 
 			[
 				{"sale date": "Tuesdays", "time": "9:30 a.m.", "livestock": "Cattle, Sheep, Goats"}
-			]
+			],
+            "livestock": "Cattle, Sheep, Goats"
 		},
 		{
 			"id": 1145,
@@ -611,7 +654,8 @@
 			[
 				{"sale date": "Thursdays", "time": "11:00 a.m.", "livestock": "Cattle"},
 				{"sale date": "First Saturday of Each Month", "time": "11:00 a.m.","livestock": "Special Cattle"}
-			]
+			],
+            "livestock": "Cattle, Special Cattle"
 		},
 		{
 			"id": 1146,
@@ -629,7 +673,8 @@
 				{"sale date": "Fourth Saturday of Each Month", "time": "12:00 p.m.","livestock": "All Livestock"},
 				{"sale date": "Second Thursday of Each Month", "time": "6:00 p.m.", "livestock": "Sheep, Goats"},
 				{"sale date": "First Friday of Each Month", "time": "6:00 p.m.","livestock": "Equine"}
-			]
+			],
+            "livestock": "Miscellaneous, All Livestock, Sheep, Goats, Equine"
 		},
 		{
 			"id": 1147,
@@ -642,7 +687,8 @@
 			"auctions": 
 			[
 				{"sale date": "Mondays", "time": "11:00 a.m.", "livestock": "Cattle"}
-			]
+			],
+            "livestock": "Cattle"
 			
 		},
 		{
@@ -657,7 +703,8 @@
 			[
 				{"sale date": "Thursdays", "time": "11:00 a.m.", "livestock": "Cattle"},
 				{"sale date": "Once a Month on Saturday", "time": "11:00 a.m.","livestock": "Cattle"}
-			]
+			],
+            "livestock": "Cattle"
 			
 		},
 		{
@@ -671,7 +718,8 @@
 			"auctions": 
 			[
 				{"sale date": "Mondays", "time": "12:00 p.m.", "livestock": "Cattle, Equine, Sheep, Goats"}
-			]
+			],
+            "livestock": "Cattle, Equine, Sheep, Goats"
 		},
 		{
 			"id": 1150,
@@ -685,7 +733,8 @@
 			[
 				{"sale date": "Thursdays", "time": "12:00 p.m.", "livestock": "Dairy Cattle"},
 				{"sale date": "Fourth Saturday of Each Month", "time": "12:00 p.m.","livestock": "Goats, Sheep"}
-			]
+			],
+            "livestock": "Dairy Cattle, Goats, Sheep"
 		},
 		{
 			"id": 1151,
@@ -699,7 +748,8 @@
 			[
 				{"sale date": "Fridays", "time": "12:00 p.m.", "livestock": "Cattle, Swine, Sheep, Goats"},
 				{"sale date": "First Tuesday of Each Month", "time": "6:30 p.m.","livestock": "Special Cattle"}
-			]
+			],
+            "livestock": "Cattle, Swine, Sheep, Goats, Special Cattle"
 		},
 		{
 			"id": 1152,
@@ -713,7 +763,8 @@
 			[
 				{"sale date": "Tuesdays", "time": "8:30 a.m.", "livestock": "Feeder Cattle"},
 				{"sale date": "Wednesdays", "time": "12:00 p.m.","livestock": "Cattle, Bull, Cattle/Calf Pair"}
-			]
+			],
+            "livestock": "Feeder Cattle, Cattle, Bull, Cattle/Calf Pair"
 		},
 		{
 			"id": 1153,
@@ -726,7 +777,8 @@
 			"auctions": 
 			[
 				{"sale date": "Mondays", "time": "1:00 p.m.", "livestock": "Cattle, Equine, Sheep, Goats"}
-			]
+			],
+            "livestock": "Cattle, Equine, Sheep, Goats"
 		},
 		{
 			"id": 1154,
@@ -740,7 +792,8 @@
 			[
 				{"sale date": "Second Saturday of Each Month", "time": "6:00 p.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"},
 				{"sale date": "Fourth Saturday of Each Month", "time": "6:00 p.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"}
-			]
+			],
+            "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"
 		},
 		{
 			"id": 1155,
@@ -754,7 +807,8 @@
 			[
 				{"sale date": "Saturday", "time": "1:00 p.m.", "livestock": "Cattle, Swine, Sheep, Goats"},
 				{"sale date": "First Saturday of Each Month", "time": "5:30 p.m.","livestock": "Poultry"}
-			]
+			],
+            "livestock": "Cattle, Swine, Sheep, Goats, Poultry"
 		},
 		{
 			"id": 1156,
@@ -769,7 +823,8 @@
 				{"sale date": "First Saturday of Each Month", "time": "Contact for Time", "livestock": "Equine, Swine, Sheep, Goats, Poultry"},
 				{"sale date": "Third Saturday of Each Month", "time": "Contact for Time", "livestock": "Equine, Swine, Sheep, Goats, Poultry"},
 				{"sale date": "Fifth Saturday of Each Month", "time": "Contact for Time", "livestock": "Equine, Swine, Sheep, Goats, Poultry"}
-			]
+			],
+            "livestock": "Equine, Swine, Sheep, Goats, Poultry"
 		},
 		{
 			"id": 1157,
@@ -783,7 +838,8 @@
 			[
 				{"sale date": "Second Friday of Each Month", "time": "6:00 p.m.", "livestock": "Equine, Swine, Sheep, Goats, Poultry"},
 				{"sale date": "Fourth Friday of Each Month", "time": "6:00 p.m.", "livestock": "Equine, Swine, Sheep, Goats, Poultry"}
-			]
+			],
+            "livestock": "Equine, Swine, Sheep, Goats, Poultry"
 		},
 		{
 			"id": 1158,
@@ -796,7 +852,8 @@
 			"auctions": 
 			[
 				{"sale date": "Saturdays", "time": "10:00 a.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"}
-			]
+			],
+            "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"
 		},
 		{
 			"id": 1159,
@@ -811,7 +868,8 @@
 				{"sale date": "Mondays", "time": "12:00 p.m.", "livestock": "Cattle"},
 				{"sale date": "Second Tuesday of Each Month", "time": "6:00 p.m.","livestock": "Goats, Swine, Sheep, Poultry"},
 				{"sale date": "Second Friday of Each Month", "time": "6:30 p.m.", "livestock": "Cattle"}
-			]
+			],
+            "livestock": "Cattle, Goats, Swine, Sheep, Poultry"
 		},
 		{
 			"id": 1160,
@@ -824,7 +882,8 @@
 			"auctions": 
 			[
 				{"sale date": "Second Saturday of Each Month", "time": "12:00 p.m.", "livestock": "Equine, Sheep, Goats, Poultry"}
-			]
+			],
+            "livestock": "Equine, Sheep, Goats, Poultry"
 		},
 		{
 			"id": 1161,
@@ -838,7 +897,8 @@
 			[
 				{"sale date": "Saturdays", "time": "12:00 p.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats"},
 				{"sale date": "First Wednesday of Each Month", "time": "10:30 a.m.","livestock": "Dairy Cattle"}
-			]
+			],
+            "livestock": "Cattle, Equine, Swine, Sheep, Goats, Dairy Cattle"
 		},
 		{
 			"id": 1162,
@@ -851,7 +911,8 @@
 			"auctions": 
 			[
 				{"sale date": "First Saturday of Each Month", "time": "9:00 a.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats, Exotic, Poultry"}
-			]
+			],
+            "livestock": "Cattle, Equine, Swine, Sheep, Goats, Exotic, Poultry"
 		},
 		{
 			"id": 1163,
@@ -864,7 +925,8 @@
 			"auctions": 
 			[
 				{"sale date": "Wednesdays", "time": "10:00 a.m.", "livestock": "Cattle, Feeder Calf, Swine, Sheep, Goats"}
-			]
+			],
+            "livestock": "Cattle, Feeder Calf, Swine, Sheep, Goats"
 			
 		},
 		{
@@ -880,7 +942,8 @@
 				{"sale date": "Mondays", "time": "9:00 a.m.", "livestock": "Cattle, Bull"},
 				{"sale date": "Tuesdays", "time": "11:00 a.m.","livestock": "Dairy Cattle"},
 				{"sale date": "Wednesdays", "time": "8:00 a.m.", "livestock": "Feeder Cattle"}
-			]
+			],
+            "livestock": "Cattle, Bull, Dairy Cattle, Feeder Cattle"
 		},
 		{
 			"id": 1165,
@@ -893,7 +956,8 @@
 			"auctions": 
 			[
 				{"sale date": "Second Saturday of Each Month", "time": "Contact for Time", "livestock": "Poultry"}
-			]
+			],
+            "livestock": "Poultry"
 		},
 		{
 			"id": 1166,
@@ -913,7 +977,8 @@
 				{"sale date": "Thursdays", "time": "8:00 a.m.","livestock": "Swine"},
 				{"sale date": "First Tuesday of Each Month", "time": "1:00 p.m.", "livestock": "Feeder Pigs"},
 				{"sale date": "Second Thursday of Each Month", "time": "4:00 p.m.","livestock": "Sheep, Goats"}
-			]
+			],
+            "livestock": "Cattle, Swine, Feeder Pigs, Sheep, Goats"
 		},
 		{
 			"id": 1167,
@@ -927,7 +992,8 @@
 			[
 				{"sale date": "Wednesdays", "time": "1:00 p.m.", "livestock": "Cattle, Equine, Swine"},
 				{"sale date": "Third Saturday of Each Month", "time": "1:00 p.m.","livestock": "Sheep, Goats, Poultry"}
-			]
+			],
+            "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"
 		},
 		{
 			"id": 1168,
@@ -941,7 +1007,8 @@
 			[
 				{"sale date": "First Friday of Each Month", "time": "7:00 p.m.", "livestock": "Equine, Mule, Donkey"},
 				{"sale date": "Third Friday of Each Month", "time": "6:00 p.m.","livestock": "Goats, Sheep, Poultry, Cattle, Swine"}
-			]
+			],
+            "livestock": "Equine, Mule, Donkey, Goats, Sheep, Poultry, Cattle, Swine"
 		},
 		{
 			"id": 1169,
@@ -954,7 +1021,8 @@
 			"auctions": 
 			[
 				{"sale date": "Fridays", "time": "12:30 p.m.", "livestock": "Cattle"}
-			]
+			],
+            "livestock": "Cattle"
 		},
 		{
 			"id": 1170,
@@ -968,7 +1036,8 @@
 			[
 				{"sale date": "Second Wednesday of Each Month", "time": "5:00 p.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"},
 				{"sale date": "Fourth Wednesday of Each Month", "time": "5:00 p.m.","livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"}
-			]
+			],
+            "livestock": "Cattle, Equine, Swine, Sheep, Goats, Poultry"
 		},
 		{
 			"id": 1171,
@@ -982,7 +1051,7 @@
 			[
 				{"sale date": "First Thursday of Each Month", "time": "4:00 p.m.", "livestock": "Sheep, Goats"},
 				{"sale date": "Second Tuesday of Each Month", "time": "5:00 p.m.","livestock": "Equine"}
-			]
+			], "livestock": "Sheep, Goats, Equine"
 		},
 		{
 			"id": 1172,
@@ -995,7 +1064,8 @@
 			"auctions": 
 			[
 				{"sale date": "Tuesdays", "time": "11:30 a.m.", "livestock": "Cattle"}
-			]
+			],
+            "livestock": "Cattle"
 		},
 		{
 			"id": 1173,
@@ -1009,7 +1079,8 @@
 			[
 				{"sale date": "Thursdays", "time": "10:00 a.m.", "livestock": "Cattle"},
 				{"sale date": "Last Monday of Each Month", "time": "6:00 p.m.","livestock": "Cattle"}
-			]
+			],
+            "livestock": "Cattle"
 		},
 		{
 			"id": 1174,
@@ -1024,7 +1095,8 @@
 				{"sale date": "October - March, Friday", "time": "10:00 a.m.", "livestock": "Cattle"},
 				{"sale date": "April - September Tuesday", "time": "1:00 p.m.","livestock": "Cattle"},
 				{"sale date": "Every Two Weeks on Tuesday in Summer", "time": "11:00 a.m.", "livestock": "Cattle"}
-			]
+			],
+            "livestock": "Cattle"
 			
 		},
 		{
@@ -1037,8 +1109,9 @@
 			"contact": "(417) 993-5989",
 			"auctions": 
 			[
-				{"sale date": "Mondays", "time": "11:30 a.m.", "livestock": "Cattle, Equine. Swine"}
-			]
+				{"sale date": "Mondays", "time": "11:30 a.m.", "livestock": "Cattle, Equine, Swine"}
+			],
+            "livestock": "Cattle, Equine, Swine"
 		},
 		{
 			"id": 1177,
@@ -1052,7 +1125,8 @@
 			[
 				{"sale date": "Thursdays", "time": "9:00 a.m.", "livestock": "Swine, Sheep, Goats"},
 				{"sale date": "Fridays", "time": "9:00 a.m.","livestock": "Swine, Sheep, Goats"}
-			]
+			],
+            "livestock": "Swine, Sheep, Goats"
 		},
 		{
 			"id": 1178,
@@ -1065,7 +1139,8 @@
 			"auctions": 
 			[
 				{"sale date": "Saturdays", "time": "12:30 p.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats, Exotic, Poultry"}
-			]
+			],
+            "livestock": "Cattle, Equine, Swine, Sheep, Goats, Exotic, Poultry"
 		},
 		{
 			"id": 1179,
@@ -1077,9 +1152,10 @@
 			"contact": "(417) 646-8102",
 			"auctions": 
 			[
-				{"sale date": "Thursdays", "time": "1:00 p.m.", "livestock": "Cattle Equine"},
+				{"sale date": "Thursdays", "time": "1:00 p.m.", "livestock": "Cattle, Equine"},
 				{"sale date": "Last Saturday of Each Month", "time": "6:00 pm","livestock": "Stock Cattle"}
-			]
+			],
+            "livestock": "Cattle, Equine, Stock Cattle"
 		},
 		{
 			"id": 1180,
@@ -1092,7 +1168,8 @@
 			"auctions": 
 			[
 				{"sale date": "April - October Third Saturday of Each Month", "time": "12:00 p.m.", "livestock": "Poultry"}
-			]
+			],
+            "livestock": "Poultry"
 		},
 		{
 			"id": 1181,
@@ -1105,7 +1182,8 @@
 			"auctions": 
 			[
 				{"sale date": "Wednesdays", "time": "12:00 p.m.", "livestock": "Cattle"}
-			]
+			],
+            "livestock": "Cattle"
 		}
 	]
 }
