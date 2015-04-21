@@ -17,15 +17,7 @@
 		4463BB401ACC32D100ED8C7A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4463BB3E1ACC32D100ED8C7A /* LaunchScreen.xib */; };
 		4463BB4C1ACC32D100ED8C7A /* YardStockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4463BB4B1ACC32D100ED8C7A /* YardStockTests.swift */; };
 		4463BB561ACC331F00ED8C7A /* YardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4463BB551ACC331F00ED8C7A /* YardsTableViewController.swift */; };
-<<<<<<< Updated upstream
 		449C5F601AE5D76800F49B26 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449C5F5F1AE5D76800F49B26 /* CoreLocation.framework */; };
-=======
-<<<<<<< HEAD
-		703A11291AE6C51500600524 /* FullFormTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703A11281AE6C51500600524 /* FullFormTableView.swift */; };
-=======
-		449C5F601AE5D76800F49B26 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449C5F5F1AE5D76800F49B26 /* CoreLocation.framework */; };
->>>>>>> origin/master
->>>>>>> Stashed changes
 		C18FED901ADF100C00B3A7D6 /* InfoCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18FED8F1ADF100C00B3A7D6 /* InfoCellTableViewCell.swift */; };
 		C18FED9A1AE16C8500B3A7D6 /* stockyards.json in Resources */ = {isa = PBXBuildFile; fileRef = C18FED991AE16C8500B3A7D6 /* stockyards.json */; };
 /* End PBXBuildFile section */
@@ -55,15 +47,7 @@
 		4463BB4A1ACC32D100ED8C7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4463BB4B1ACC32D100ED8C7A /* YardStockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YardStockTests.swift; sourceTree = "<group>"; };
 		4463BB551ACC331F00ED8C7A /* YardsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YardsTableViewController.swift; sourceTree = "<group>"; };
-<<<<<<< Updated upstream
 		449C5F5F1AE5D76800F49B26 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-=======
-<<<<<<< HEAD
-		703A11281AE6C51500600524 /* FullFormTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullFormTableView.swift; sourceTree = "<group>"; };
-=======
-		449C5F5F1AE5D76800F49B26 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
->>>>>>> origin/master
->>>>>>> Stashed changes
 		C18FED8F1ADF100C00B3A7D6 /* InfoCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCellTableViewCell.swift; sourceTree = "<group>"; };
 		C18FED991AE16C8500B3A7D6 /* stockyards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stockyards.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,7 +104,6 @@
 				4416604E1ACEEB8B007F82FE /* Yard.swift */,
 				4432094D1AD5B49C0077F41F /* Auction.swift */,
 				C18FED8F1ADF100C00B3A7D6 /* InfoCellTableViewCell.swift */,
-				703A11281AE6C51500600524 /* FullFormTableView.swift */,
 			);
 			path = YardStock;
 			sourceTree = "<group>";
@@ -256,7 +239,6 @@
 				4416604F1ACEEB8B007F82FE /* Yard.swift in Sources */,
 				C18FED901ADF100C00B3A7D6 /* InfoCellTableViewCell.swift in Sources */,
 				4463BB361ACC32D100ED8C7A /* AppDelegate.swift in Sources */,
-				703A11291AE6C51500600524 /* FullFormTableView.swift in Sources */,
 				4432094E1AD5B49C0077F41F /* Auction.swift in Sources */,
 				4416604D1ACEEB3C007F82FE /* Stockyards.swift in Sources */,
 				4463BB561ACC331F00ED8C7A /* YardsTableViewController.swift in Sources */,
