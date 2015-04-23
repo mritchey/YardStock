@@ -101,7 +101,7 @@
 			"contact": "(660) 684-6881",
 			"auctions": 
 			[
-				{"sale date": "Saturdays quarterly", "time": "1:00 p.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats"}
+				{"sale date": "Saturdays Quarterly", "time": "1:00 p.m.", "livestock": "Cattle, Equine, Swine, Sheep, Goats"}
 			],
             "livestock": "Cattle, Equine, Swine, Sheep, Goats"
 		},
@@ -601,10 +601,10 @@
 		},
 		{
 			"id": 1142,
-			"name": "Milan Livestock Auction  Inc. d/b/a Brookfield Sale Company",
+			"name": "Milan Livestock Auction Inc. d/b/a Brookfield Sale Company",
 			"lat": 39.781446,
 			"long": -93.083291,
-			"address": "805 W. –Helm St.",
+			"address": "805 W. Helm St.",
 			"city": "Brookfield",
 			"contact": "(660) 258-2020",
 			"auctions": 

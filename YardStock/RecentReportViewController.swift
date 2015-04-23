@@ -30,7 +30,16 @@ class RecentReportViewController: UIViewController, UITableViewDataSource, UITab
         tableView.rowHeight = UITableViewAutomaticDimension
         
         // Do any additional setup after loading the view.
+
         
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
     //add nav title back
