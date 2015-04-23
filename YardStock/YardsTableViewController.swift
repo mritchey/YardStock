@@ -60,7 +60,7 @@ class YardsTableViewController: UIViewController, UITableViewDataSource, UITable
         let cell = tableView.dequeueReusableCellWithIdentifier(prototypeCellIdentifier) as! UITableViewCell
         cell.textLabel?.text = stockyards.yards[indexPath.row].name
         if(locationFixAchieved){
-            cell.detailTextLabel?.text = String(format: "\(stockyards.yards[indexPath.row].city) , MO | %.2f Miles", stockyards.yards[indexPath.row].distanceAway!)
+            cell.detailTextLabel?.text = String(format: "\(stockyards.yards[indexPath.row].city), MO | %.1f Miles", stockyards.yards[indexPath.row].distanceAway!)
         }
         else{
             cell.detailTextLabel?.text = stockyards.yards[indexPath.row].city + ", MO"
