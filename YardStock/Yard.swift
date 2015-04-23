@@ -18,6 +18,7 @@ class Yard: NSObject {
     var contact: String
     var auctions = Array<Auction>()
     var livestock: String
+    var distanceAway: Double?
 
     init(name: String, lat:CLLocationDegrees, long:CLLocationDegrees, address: String, city: String, contact: String, livestock: String){
         self.name = name
@@ -27,5 +28,9 @@ class Yard: NSObject {
         self.city = city
         self.contact = contact
         self.livestock = livestock
+    }
+    
+    func setDistanceAway(distance: Double){
+        self.distanceAway = distance
     }
 }

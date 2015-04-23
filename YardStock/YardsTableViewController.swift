@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class YardsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class YardsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var StockyardsTable: UITableView!
     
@@ -16,17 +17,27 @@ class YardsTableViewController: UIViewController, UITableViewDataSource, UITable
     var stockyards: Stockyards = Stockyards()
     var selectedYard: Yard?
     let urlString = NSBundle(forClass: YardsTableViewController.self).pathForResource("stockyards", ofType: "json")!
+    var locationManager: CLLocationManager!
+    var locationFixAchieved = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         stockyards.load(urlString) {
             (companies, errorString) -> Void in
             if let unwrappedErrorString = errorString {
                 // can do something about error here
                 println(unwrappedErrorString)
             } else {
-                //self.stockyards.yards.sort({$0.city > $1.city}) something like this for ordering on distance
+                self.locationManager = CLLocationManager()
+                self.locationManager.delegate = self
+                if CLLocationManager.authorizationStatus() == .NotDetermined {
+                    self.locationManager!.requestWhenInUseAuthorization()
+                }
+                if CLLocationManager.authorizationStatus() != .Restricted || CLLocationManager.authorizationStatus() != .Denied {
+                    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                    self.locationManager.startUpdatingLocation()
+                }
+                self.stockyards.yards.sort({$0.city < $1.city})
                 self.StockyardsTable.reloadData()
             }
         }
@@ -48,7 +59,12 @@ class YardsTableViewController: UIViewController, UITableViewDataSource, UITable
         
         let cell = tableView.dequeueReusableCellWithIdentifier(prototypeCellIdentifier) as! UITableViewCell
         cell.textLabel?.text = stockyards.yards[indexPath.row].name
-        cell.detailTextLabel?.text = stockyards.yards[indexPath.row].city + ", MO"
+        if(locationFixAchieved){
+            cell.detailTextLabel?.text = String(format: "\(stockyards.yards[indexPath.row].city) , MO | %.2f Miles", stockyards.yards[indexPath.row].distanceAway!)
+        }
+        else{
+            cell.detailTextLabel?.text = stockyards.yards[indexPath.row].city + ", MO"
+        }
         cell.detailTextLabel?.textColor = UIColor.grayColor()
         //code to set cell info
         
@@ -75,5 +91,20 @@ class YardsTableViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidAppear(animated: Bool) {
         navigationController?.navigationBar.topItem?.title = "Stockyards"
+    }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        if (locationFixAchieved == false) {
+            locationFixAchieved = true
+            var locationArray = locations as NSArray
+            var locationObj = locationArray.lastObject as! CLLocation
+            for yard in self.stockyards.yards {
+                var location = CLLocation(latitude: yard.lat, longitude: yard.long)
+                var distance = locationObj.distanceFromLocation(location) / 1609.34
+                yard.setDistanceAway(distance)
+            }
+            self.stockyards.yards.sort({$0.distanceAway < $1.distanceAway})
+            self.StockyardsTable.reloadData()
+        }
     }
 }
