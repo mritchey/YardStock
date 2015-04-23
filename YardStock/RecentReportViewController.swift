@@ -73,10 +73,7 @@ class RecentReportViewController: UIViewController, UITableViewDataSource, UITab
             infoCell?.phoneLabel.textColor = UIColor.grayColor()
             infoCell?.livestockLabel.text = stockyard!.livestock
             infoCell?.livestockLabel.textColor = UIColor.grayColor()
-            
-            tableView.beginUpdates()
-            tableView.endUpdates()
-            
+                        
             cell = infoCell
             cell?.separatorInset = UIEdgeInsetsMake(0, 999, 0, 0)
         }
