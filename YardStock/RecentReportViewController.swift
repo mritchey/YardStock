@@ -24,7 +24,7 @@ class RecentReportViewController: UIViewController, UITableViewDataSource, UITab
         rowsAdded.append(NSIndexPath(forRow: 2, inSection: 0))
         
         navigationController?.navigationBar.topItem?.title = ""
-       
+        
         //resize cells
         tableView.estimatedRowHeight = 89
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -73,6 +73,9 @@ class RecentReportViewController: UIViewController, UITableViewDataSource, UITab
             infoCell?.phoneLabel.textColor = UIColor.grayColor()
             infoCell?.livestockLabel.text = stockyard!.livestock
             infoCell?.livestockLabel.textColor = UIColor.grayColor()
+            
+            tableView.beginUpdates()
+            tableView.endUpdates()
             
             cell = infoCell
             cell?.separatorInset = UIEdgeInsetsMake(0, 999, 0, 0)
