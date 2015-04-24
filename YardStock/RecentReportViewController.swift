@@ -173,5 +173,8 @@ class RecentReportViewController: UIViewController, UITableViewDataSource, UITab
     }
     override func viewDidAppear(animated: Bool) {
         pageTitle.title = pageTopTitle
+        
+        tableView.beginUpdates()
+        tableView.endUpdates()
     }
 }
