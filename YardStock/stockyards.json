@@ -28,7 +28,7 @@
 			"contact": "(573) 880-2008",
 			"auctions": 
 			[
-				{"sale date":  "Third Saturday of Each Month", "time":  "Contact for Time", "livestock":  "Goats, Sheep"}
+				{"sale date": "Third Saturday of Each Month", "time": "Contact for Time", "livestock": "Goats, Sheep"}
 			],
             "livestock": "Goats, Sheep"
 		},
@@ -42,7 +42,7 @@
 			"contact": "(417) 623-1660",
 			"auctions": 
 			[
-				{"sale date": "Fridays", "time":  "10:00 a.m.", "livestock":  "Poultry"},
+				{"sale date": "Fridays", "time": "10:00 a.m.", "livestock": "Poultry"},
 			],
             "livestock": "Poultry"
 		},
@@ -1051,7 +1051,8 @@
 			[
 				{"sale date": "First Thursday of Each Month", "time": "4:00 p.m.", "livestock": "Sheep, Goats"},
 				{"sale date": "Second Tuesday of Each Month", "time": "5:00 p.m.","livestock": "Equine"}
-			], "livestock": "Sheep, Goats, Equine"
+			],
+            "livestock": "Sheep, Goats, Equine"
 		},
 		{
 			"id": 1172,
