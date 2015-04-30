@@ -17,6 +17,8 @@
 		4463BB401ACC32D100ED8C7A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4463BB3E1ACC32D100ED8C7A /* LaunchScreen.xib */; };
 		4463BB4C1ACC32D100ED8C7A /* YardStockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4463BB4B1ACC32D100ED8C7A /* YardStockTests.swift */; };
 		4463BB561ACC331F00ED8C7A /* YardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4463BB551ACC331F00ED8C7A /* YardsTableViewController.swift */; };
+		4486D2E41AF2A5D100004CB3 /* ViewReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4486D2E31AF2A5D100004CB3 /* ViewReportTableViewController.swift */; };
+		4486D2E61AF2ADB600004CB3 /* DoubleLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4486D2E51AF2ADB600004CB3 /* DoubleLabelTableViewCell.swift */; };
 		449C5F601AE5D76800F49B26 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449C5F5F1AE5D76800F49B26 /* CoreLocation.framework */; };
 		C18FED901ADF100C00B3A7D6 /* InfoCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18FED8F1ADF100C00B3A7D6 /* InfoCellTableViewCell.swift */; };
 		C18FED9A1AE16C8500B3A7D6 /* stockyards.json in Resources */ = {isa = PBXBuildFile; fileRef = C18FED991AE16C8500B3A7D6 /* stockyards.json */; };
@@ -47,6 +49,8 @@
 		4463BB4A1ACC32D100ED8C7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4463BB4B1ACC32D100ED8C7A /* YardStockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YardStockTests.swift; sourceTree = "<group>"; };
 		4463BB551ACC331F00ED8C7A /* YardsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YardsTableViewController.swift; sourceTree = "<group>"; };
+		4486D2E31AF2A5D100004CB3 /* ViewReportTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewReportTableViewController.swift; sourceTree = "<group>"; };
+		4486D2E51AF2ADB600004CB3 /* DoubleLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoubleLabelTableViewCell.swift; path = "Custom Cells/DoubleLabelTableViewCell.swift"; sourceTree = "<group>"; };
 		449C5F5F1AE5D76800F49B26 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C18FED8F1ADF100C00B3A7D6 /* InfoCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCellTableViewCell.swift; sourceTree = "<group>"; };
 		C18FED991AE16C8500B3A7D6 /* stockyards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stockyards.json; sourceTree = "<group>"; };
@@ -99,11 +103,10 @@
 				4463BB3E1ACC32D100ED8C7A /* LaunchScreen.xib */,
 				4463BB551ACC331F00ED8C7A /* YardsTableViewController.swift */,
 				441660461ACEE6D9007F82FE /* RecentReportViewController.swift */,
+				4486D2E31AF2A5D100004CB3 /* ViewReportTableViewController.swift */,
+				4486D2DD1AF29F5A00004CB3 /* Custom Cells */,
+				4486D2E21AF2A59600004CB3 /* Model */,
 				4463BB331ACC32D100ED8C7A /* Supporting Files */,
-				4416604C1ACEEB3C007F82FE /* Stockyards.swift */,
-				4416604E1ACEEB8B007F82FE /* Yard.swift */,
-				4432094D1AD5B49C0077F41F /* Auction.swift */,
-				C18FED8F1ADF100C00B3A7D6 /* InfoCellTableViewCell.swift */,
 			);
 			path = YardStock;
 			sourceTree = "<group>";
@@ -132,6 +135,25 @@
 				4463BB4A1ACC32D100ED8C7A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4486D2DD1AF29F5A00004CB3 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C18FED8F1ADF100C00B3A7D6 /* InfoCellTableViewCell.swift */,
+				4486D2E51AF2ADB600004CB3 /* DoubleLabelTableViewCell.swift */,
+			);
+			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		4486D2E21AF2A59600004CB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4416604E1ACEEB8B007F82FE /* Yard.swift */,
+				4432094D1AD5B49C0077F41F /* Auction.swift */,
+				4416604C1ACEEB3C007F82FE /* Stockyards.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,10 +259,12 @@
 			files = (
 				441660471ACEE6D9007F82FE /* RecentReportViewController.swift in Sources */,
 				4416604F1ACEEB8B007F82FE /* Yard.swift in Sources */,
+				4486D2E41AF2A5D100004CB3 /* ViewReportTableViewController.swift in Sources */,
 				C18FED901ADF100C00B3A7D6 /* InfoCellTableViewCell.swift in Sources */,
 				4463BB361ACC32D100ED8C7A /* AppDelegate.swift in Sources */,
 				4432094E1AD5B49C0077F41F /* Auction.swift in Sources */,
 				4416604D1ACEEB3C007F82FE /* Stockyards.swift in Sources */,
+				4486D2E61AF2ADB600004CB3 /* DoubleLabelTableViewCell.swift in Sources */,
 				4463BB561ACC331F00ED8C7A /* YardsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

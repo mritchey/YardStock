@@ -124,9 +124,13 @@ class RecentReportViewController: UIViewController, UITableViewDataSource, UITab
 
     }
     //View report
-//    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-//        performSegueWithIdentifier("toReportView", sender: self)
-//    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        if tableView.cellForRowAtIndexPath(indexPath)?.reuseIdentifier == "pastReportsCell"
+        {
+            performSegueWithIdentifier("toViewReport", sender: self)
+        }
+    }
     
     @IBAction func segChanged(sender: AnyObject) {
         let segControl = sender as! UISegmentedControl
