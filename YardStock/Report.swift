@@ -20,10 +20,6 @@ class Report: NSObject {
     var summary: NSString
     var livestock: NSString
     var source: NSString
-//    private var longDateFormatter: NSDateFormatter = NSDateFormatter()
-//    private var longDateFormatString = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'"
-//    dateFormatter = NSDateFormatter()
-//    dateFormatter.dateFormat = dateFormatString
     
     init(id: Int, title: NSString, date: NSDate, stockyard: NSString, auction: NSString, receipts: Int, weekOldReceipts: Int, yearOldReceipts: Int, summary: NSString, livestock: NSString, source: NSString){
         self.id = id

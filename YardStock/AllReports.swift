@@ -11,6 +11,11 @@ import UIKit
 class AllReports: NSObject {
     var reports = Array<Report>()
     
+    //    private var longDateFormatter: NSDateFormatter = NSDateFormatter()
+    //    private var longDateFormatString = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'"
+    //    dateFormatter = NSDateFormatter()
+    //    dateFormatter.dateFormat = dateFormatString
+    
     func load(fromURLString: String, completionHandler: (AllReports, String?) -> Void){
         reports = Array<Report>()
         if let url = NSURL(string: fromURLString) {
