@@ -20,6 +20,8 @@
 		4486D2E41AF2A5D100004CB3 /* ViewReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4486D2E31AF2A5D100004CB3 /* ViewReportTableViewController.swift */; };
 		4486D2E61AF2ADB600004CB3 /* DoubleLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4486D2E51AF2ADB600004CB3 /* DoubleLabelTableViewCell.swift */; };
 		449C5F601AE5D76800F49B26 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449C5F5F1AE5D76800F49B26 /* CoreLocation.framework */; };
+		44B93D961AFA59F300342B30 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B93D951AFA59F300342B30 /* Report.swift */; };
+		44B93D981AFA5CB000342B30 /* AllReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B93D971AFA5CB000342B30 /* AllReports.swift */; };
 		C18FED901ADF100C00B3A7D6 /* InfoCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18FED8F1ADF100C00B3A7D6 /* InfoCellTableViewCell.swift */; };
 		C18FED9A1AE16C8500B3A7D6 /* stockyards.json in Resources */ = {isa = PBXBuildFile; fileRef = C18FED991AE16C8500B3A7D6 /* stockyards.json */; };
 /* End PBXBuildFile section */
@@ -52,6 +54,8 @@
 		4486D2E31AF2A5D100004CB3 /* ViewReportTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewReportTableViewController.swift; sourceTree = "<group>"; };
 		4486D2E51AF2ADB600004CB3 /* DoubleLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoubleLabelTableViewCell.swift; path = "Custom Cells/DoubleLabelTableViewCell.swift"; sourceTree = "<group>"; };
 		449C5F5F1AE5D76800F49B26 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		44B93D951AFA59F300342B30 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		44B93D971AFA5CB000342B30 /* AllReports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllReports.swift; sourceTree = "<group>"; };
 		C18FED8F1ADF100C00B3A7D6 /* InfoCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCellTableViewCell.swift; sourceTree = "<group>"; };
 		C18FED991AE16C8500B3A7D6 /* stockyards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stockyards.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,8 +154,10 @@
 			isa = PBXGroup;
 			children = (
 				4416604E1ACEEB8B007F82FE /* Yard.swift */,
+				44B93D971AFA5CB000342B30 /* AllReports.swift */,
 				4432094D1AD5B49C0077F41F /* Auction.swift */,
 				4416604C1ACEEB3C007F82FE /* Stockyards.swift */,
+				44B93D951AFA59F300342B30 /* Report.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -258,9 +264,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				441660471ACEE6D9007F82FE /* RecentReportViewController.swift in Sources */,
+				44B93D961AFA59F300342B30 /* Report.swift in Sources */,
 				4416604F1ACEEB8B007F82FE /* Yard.swift in Sources */,
 				4486D2E41AF2A5D100004CB3 /* ViewReportTableViewController.swift in Sources */,
 				C18FED901ADF100C00B3A7D6 /* InfoCellTableViewCell.swift in Sources */,
+				44B93D981AFA5CB000342B30 /* AllReports.swift in Sources */,
 				4463BB361ACC32D100ED8C7A /* AppDelegate.swift in Sources */,
 				4432094E1AD5B49C0077F41F /* Auction.swift in Sources */,
 				4416604D1ACEEB3C007F82FE /* Stockyards.swift in Sources */,
