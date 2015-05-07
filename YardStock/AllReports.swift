@@ -11,6 +11,14 @@ import UIKit
 class AllReports: NSObject {
     var reports = Array<Report>()
     
+    private var dateFormatter: NSDateFormatter = NSDateFormatter()
+    private var dateFormatString = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'"
+    
+    override init() {
+        dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = dateFormatString
+    }
+    
     func load(fromURLString: String, completionHandler: (AllReports, String?) -> Void){
         reports = Array<Report>()
         if let url = NSURL(string: fromURLString) {
@@ -43,9 +51,7 @@ class AllReports: NSObject {
                 for listReports in jsonResult {
                     if let reportId = listReports["id"] as? Int,
                         reportTitle = listReports["title"] as? NSString,
-                        reportMonth = listReports["month"] as? Int,
-                        reportDay = listReports["day"] as? Int,
-                        reportYear = listReports["year"] as? Int,
+                        reportDate = listReports["Date"] as? String,
                         reportStockyard = listReports["stockyard"] as? NSString,
                         reportAuction = listReports["auction"] as? NSString,
                         reportReceipts = listReports["receipts"] as? Int,
@@ -54,7 +60,8 @@ class AllReports: NSObject {
                         reportSummary = listReports["summary"] as? NSString,
                         reportLivestock = listReports["livestock"] as? NSString,
                         reportSource = listReports["source"] as? NSString{
-                            reports.append(Report(id: reportId, title: reportTitle, month: reportMonth, day: reportDay, year: reportYear, stockyard: reportStockyard, auction: reportAuction, receipts: reportReceipts, weekOldReceipts: reportWeekOldReceipts, yearOldReceipts: reportYearOldReceipts, summary: reportSummary, livestock: reportLivestock, source: reportSource))
+                            var reportDateAsDate = dateFormatter.dateFromString(reportDate)
+                            reports.append(Report(id: reportId, title: reportTitle, date: reportDateAsDate!, stockyard: reportStockyard, auction: reportAuction, receipts: reportReceipts, weekOldReceipts: reportWeekOldReceipts, yearOldReceipts: reportYearOldReceipts, summary: reportSummary, livestock: reportLivestock, source: reportSource))
                         }
                 }
                 dispatch_async(dispatch_get_main_queue(), {
