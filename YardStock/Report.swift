@@ -11,7 +11,9 @@ import UIKit
 class Report: NSObject {
     var id: Int
     var title: NSString
-    var date: NSDate?
+    var month: Int
+    var day: Int
+    var year: Int
     var stockyard: NSString
     var auction: NSString
     var receipts: Int
@@ -21,10 +23,12 @@ class Report: NSObject {
     var livestock: NSString
     var source: NSString
     
-    init(id: Int, title: NSString, date: NSDate, stockyard: NSString, auction: NSString, receipts: Int, weekOldReceipts: Int, yearOldReceipts: Int, summary: NSString, livestock: NSString, source: NSString){
+    init(id: Int, title: NSString, month: Int, day: Int, year: Int, stockyard: NSString, auction: NSString, receipts: Int, weekOldReceipts: Int, yearOldReceipts: Int, summary: NSString, livestock: NSString, source: NSString){
         self.id = id
         self.title = title
-        self.date = date
+        self.month = month
+        self.day = day
+        self.year = year
         self.stockyard = stockyard
         self.auction = auction
         self.receipts = receipts
