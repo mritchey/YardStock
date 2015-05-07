@@ -10,6 +10,7 @@ import UIKit
 
 class ViewReportTableViewController: UITableViewController {
 
+    var report: Report?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -56,7 +57,7 @@ class ViewReportTableViewController: UITableViewController {
             switch  indexPath.row{
             case 0:
                 cell = tableView.dequeueReusableCellWithIdentifier("basicCell", forIndexPath: indexPath) as? UITableViewCell
-                cell?.textLabel?.text = "PUT THE TITLE HERE"
+                cell?.textLabel?.text = "\(report?.title)"
             case 1:
                 cell = tableView.dequeueReusableCellWithIdentifier("basicCell", forIndexPath: indexPath) as? UITableViewCell
                 cell?.textLabel?.text = "PUT THE AUCTION NAME HERE"
