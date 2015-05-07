@@ -12,7 +12,7 @@ class AllReports: NSObject {
     var reports = Array<Report>()
     
     private var dateFormatter: NSDateFormatter = NSDateFormatter()
-    private var dateFormatString = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'"
+    private var dateFormatString = "MM-dd-yyyy"
     
     override init() {
         dateFormatter = NSDateFormatter()
