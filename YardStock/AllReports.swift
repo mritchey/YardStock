@@ -11,11 +11,6 @@ import UIKit
 class AllReports: NSObject {
     var reports = Array<Report>()
     
-    //    private var longDateFormatter: NSDateFormatter = NSDateFormatter()
-    //    private var longDateFormatString = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'"
-    //    dateFormatter = NSDateFormatter()
-    //    dateFormatter.dateFormat = dateFormatString
-    
     func load(fromURLString: String, completionHandler: (AllReports, String?) -> Void){
         reports = Array<Report>()
         if let url = NSURL(string: fromURLString) {
@@ -43,12 +38,19 @@ class AllReports: NSObject {
     func parse(jsonData: NSData, completionHandler: (AllReports, String?) -> Void) {
         var jsonError: NSError?
         
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "mm-dd-yyyy"
+        
         if let jsonResult = NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers, error: &jsonError) as? NSArray {
             if (jsonResult.count > 0){
                 for listReports in jsonResult {
                     if let reportId = listReports["id"] as? Int,
                         reportTitle = listReports["title"] as? NSString,
-                        reportDate = listReports["Date"] as? NSDate,
+                        
+                        //format dateString to NSDate date
+                        dateString = listReports["date"] as? NSString,
+                        reportDate = dateFormatter.dateFromString(dateString as String) as NSDate?,
+                        
                         reportStockyard = listReports["stockyard"] as? NSString,
                         reportAuction = listReports["auction"] as? NSString,
                         reportReceipts = listReports["receipts"] as? Int,
@@ -56,7 +58,7 @@ class AllReports: NSObject {
                         reportYearOldReceipts = listReports["yearOldReceipts"] as? Int,
                         reportSummary = listReports["summary"] as? NSString,
                         reportLivestock = listReports["livestock"] as? NSString,
-                        reportSource = listReports["source"] as? NSString{
+                        reportSource = listReports["source"] as? NSString {
                             reports.append(Report(id: reportId, title: reportTitle, date: reportDate, stockyard: reportStockyard, auction: reportAuction, receipts: reportReceipts, weekOldReceipts: reportWeekOldReceipts, yearOldReceipts: reportYearOldReceipts, summary: reportSummary, livestock: reportLivestock, source: reportSource))
                         }
                 }

@@ -15,29 +15,44 @@ class RecentReportViewController: UIViewController, UITableViewDataSource, UITab
 
     var pageTopTitle = "Recent Report"
     var rowsAdded: [NSIndexPath] = []
-    var segSelect: Int?
+    var allReports: AllReports = AllReports()
+    let urlString = "http://yardstock.herokuapp.com/reports.json"
+    var stockyardReports: [Report] = []
+    var selectedReport: Report?
     var stockyard: Yard?
+    
+    var wentAway: Bool = false
+    var numReports: Int?
+    var segSelect: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        segSelect = 1
-        rowsAdded.append(NSIndexPath(forRow: 2, inSection: 0))
+        //load all reports
+        allReports.load(urlString) {
+            (companies, errorString) -> Void in
+            if let unwrappedErrorString = errorString {
+                // can do something about error here
+                println(unwrappedErrorString)
+            }
+        }
         
+        //initialize rowsAdded
+        rowsAdded.append(NSIndexPath(forRow: 2, inSection: 0))
+            
+        segSelect = 1
+        
+        //remove "Back" nav text
         navigationController?.navigationBar.topItem?.title = ""
         
         //resize cells
         tableView.estimatedRowHeight = 89
         tableView.rowHeight = UITableViewAutomaticDimension
-        
-        // Do any additional setup after loading the view.
-
-        
     }
     
+    //estimatedHeight Functions
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
-    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
@@ -53,10 +68,20 @@ class RecentReportViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if segSelect == 0 {
-            return 3
+            if numReports > 0 {
+                return (2 + numReports!)
+            }
+            else {
+                return 3
+            }
         }
         else if segSelect == 1 {
-            return 3
+            if numReports > 0 {
+                return 3
+            }
+            else {
+                return 3
+            }
         }
         else if segSelect == 2 {
             return (2 + stockyard!.auctions.count)
@@ -93,38 +118,78 @@ class RecentReportViewController: UIViewController, UITableViewDataSource, UITab
         }
         
         else if indexPath.row >= 2 {
-            if segSelect == 1 {
-                cell = tableView.dequeueReusableCellWithIdentifier("reportCell", forIndexPath: indexPath) as? UITableViewCell
-                cell?.separatorInset = UIEdgeInsetsMake(0, 999, 0, 0)
-            }
-            else if segSelect == 0 {
+            if segSelect == 0 {
                 cell = tableView.dequeueReusableCellWithIdentifier("pastReportsCell", forIndexPath: indexPath) as? UITableViewCell
                 
                 cell!.detailTextLabel?.textColor = UIColor.grayColor()
+                if numReports > 0 {
+                    let dateFormatter = NSDateFormatter()
+                    dateFormatter.dateFormat = "mm-dd-yyyy"
+                    let reportDate = dateFormatter.stringFromDate(stockyardReports[indexPath.row - 2].date!)
+                    
+                    cell!.textLabel!.text = stockyardReports[indexPath.row - 2].title as String
+                    cell!.detailTextLabel!.text = reportDate
+                }
+                else {
+                    cell!.textLabel!.text = "No Reports Available"
+                    cell!.detailTextLabel!.text = ""
+                    cell!.accessoryType = UITableViewCellAccessoryType.None
+                    cell!.selectionStyle = UITableViewCellSelectionStyle.None
+                    cell!.userInteractionEnabled = false
+                }
             }
+                
+            else if segSelect == 1 {
+                cell = tableView.dequeueReusableCellWithIdentifier("reportCell", forIndexPath: indexPath) as? UITableViewCell
+                if numReports > 0 {
+                    
+                    var mostRecentReport = stockyardReports[0]
+                    for var x = 1; x < numReports; x++ {
+                        if stockyardReports[x].date?.compare(stockyardReports[x - 1].date!) == NSComparisonResult.OrderedDescending {
+                            mostRecentReport = stockyardReports[x]
+                        }
+                    }
+                    
+                    let dateFormatter = NSDateFormatter()
+                    dateFormatter.dateFormat = "mm-dd-yyyy"
+                    let mostRecentReportDate = dateFormatter.stringFromDate(mostRecentReport.date!)
+                    
+                    cell!.textLabel!.text = (mostRecentReport.title as String) + "\n\n" + (mostRecentReport.auction as String) + "\n\n" + (mostRecentReportDate) + "\n\nReceipts: " + (String(mostRecentReport.receipts)) + "\n\nLast Week: " + (String(mostRecentReport.weekOldReceipts)) + "\n\nYear Ago: " + (String(mostRecentReport.yearOldReceipts)) + "\n\nSummary:\n" + (mostRecentReport.summary as String) + "\n\nLivestock:\n" + (mostRecentReport.livestock as String) + "\n\nSource:\n" + (mostRecentReport.source as String)
+                }
+                else {
+                    cell!.textLabel!.text = "No Reports Available"
+                    cell!.userInteractionEnabled = false
+                }
+            }
+                
             else if segSelect == 2 {
                 cell = tableView.dequeueReusableCellWithIdentifier("upcomingAuctionsCell", forIndexPath: indexPath) as? UITableViewCell
                 cell!.textLabel!.text = stockyard!.auctions[indexPath.row - 2].livestock
                 cell!.detailTextLabel!.text = stockyard!.auctions[indexPath.row - 2].salesDate + " | " + stockyard!.auctions[indexPath.row - 2].time
                 
-                //wrap cell text
-                cell!.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
-                cell!.textLabel?.numberOfLines = 0
-                cell!.detailTextLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
-                cell!.detailTextLabel?.numberOfLines = 0
-                
                 cell!.detailTextLabel?.textColor = UIColor.grayColor()
             }
         }
+        
+        //wrap cell text
+        cell!.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        cell!.textLabel?.numberOfLines = 0
+        cell!.detailTextLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        cell!.detailTextLabel?.numberOfLines = 0
         
         cell!.setNeedsLayout()
         cell!.layoutIfNeeded()
         
         return cell!
-
     }
+    
     //View report
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row > 1 {
+            if segSelect == 0 {
+                selectedReport = allReports.reports[indexPath.row - 2]
+            }
+        }
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
         if tableView.cellForRowAtIndexPath(indexPath)?.reuseIdentifier == "pastReportsCell"
         {
@@ -132,11 +197,13 @@ class RecentReportViewController: UIViewController, UITableViewDataSource, UITab
         }
     }
     
+    //segmented control selection changed
     @IBAction func segChanged(sender: AnyObject) {
         let segControl = sender as! UISegmentedControl
         let selected = segControl.selectedSegmentIndex
-        var numCellsAdded = 0
         var auctions: [NSIndexPath] = []
+        var pastReports: [NSIndexPath] = []
+        var currentReport: [NSIndexPath] = []
         
         if selected == 0 {
             pageTopTitle = "Past Reports"
@@ -144,9 +211,21 @@ class RecentReportViewController: UIViewController, UITableViewDataSource, UITab
             segSelect = 0
             tableView.beginUpdates()
             tableView.deleteRowsAtIndexPaths(rowsAdded, withRowAnimation: .Fade)
-            tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 2, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Top)
+            rowsAdded = []
+            
+            if numReports > 0 {
+                for i in 2...(1 + numReports!) {
+                    pastReports.append(NSIndexPath(forRow: i, inSection: 0))
+                    rowsAdded.append(NSIndexPath(forRow: i, inSection: 0))
+                }
+                tableView.insertRowsAtIndexPaths(pastReports, withRowAnimation: UITableViewRowAnimation.Top)
+            }
+            else {
+                rowsAdded.append(NSIndexPath(forRow: 2, inSection: 0))
+                tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 2, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Top)
+            }
+            
             tableView.endUpdates()
-            rowsAdded = [NSIndexPath(forRow: 2, inSection: 0)]
         }
         else if selected == 1 {
             pageTopTitle = "Recent Report"
@@ -154,9 +233,19 @@ class RecentReportViewController: UIViewController, UITableViewDataSource, UITab
             segSelect = 1
             tableView.beginUpdates()
             tableView.deleteRowsAtIndexPaths(rowsAdded, withRowAnimation: .Fade)
-            tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 2, inSection: 0)], withRowAnimation: .Top)
+            rowsAdded = []
+            
+            if numReports > 0 {
+                currentReport.append(NSIndexPath(forRow: 2, inSection: 0))
+                rowsAdded.append(NSIndexPath(forRow: 2, inSection: 0))
+                tableView.insertRowsAtIndexPaths(currentReport, withRowAnimation: UITableViewRowAnimation.Fade)
+            }
+            else {
+                rowsAdded.append(NSIndexPath(forRow: 2, inSection: 0))
+                tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 2, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Top)
+            }
+            
             tableView.endUpdates()
-            rowsAdded = [NSIndexPath(forRow: 2, inSection: 0)]
         }
         else if selected == 2 {
             pageTopTitle = "Upcoming Auctions"
@@ -164,21 +253,62 @@ class RecentReportViewController: UIViewController, UITableViewDataSource, UITab
             segSelect = 2
             tableView.beginUpdates()
             tableView.deleteRowsAtIndexPaths(rowsAdded, withRowAnimation: .Fade)
+            rowsAdded = []
             
             for i in 2...(1 + stockyard!.auctions.count) {
                 auctions.append(NSIndexPath(forRow: i, inSection: 0))
+                rowsAdded.append(NSIndexPath(forRow: i, inSection: 0))
             }
                 
             tableView.insertRowsAtIndexPaths(auctions, withRowAnimation: .Top)
             tableView.endUpdates()
-            rowsAdded = auctions
         
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let destViewController = segue.destinationViewController as! ViewReportTableViewController
+        
+        destViewController.report = selectedReport
+    }
+    
     override func viewDidAppear(animated: Bool) {
+        
+        //initialize rowsAdded
+        if wentAway == true {
+            rowsAdded = []
+            for i in 2...(1 + numReports!) {
+                rowsAdded.append(NSIndexPath(forRow: i, inSection: 0))
+            }
+            print(rowsAdded.count)
+            
+            stockyardReports = []
+            segSelect = 0
+        }
+        
+        //get all the reports for this stockyard
+        for var x = 0; x < allReports.reports.count; x++ {
+            if allReports.reports[x].stockyard == stockyard!.name {
+                stockyardReports.append(allReports.reports[x])
+            }
+        }
+        
+        numReports = stockyardReports.count
+        
+        if numReports > 0 && wentAway != true {
+            tableView.reloadData()
+        }
+        
         pageTitle.title = pageTopTitle
         
         tableView.beginUpdates()
         tableView.endUpdates()
     }
+    
+    override func viewDidDisappear(animated: Bool) {
+        wentAway = true
+    }
+
+
 }

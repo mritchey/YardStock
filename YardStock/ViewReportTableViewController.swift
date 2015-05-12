@@ -10,9 +10,15 @@ import UIKit
 
 class ViewReportTableViewController: UITableViewController {
 
+    var report: Report?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(report?.title)
+        
+        tableView.estimatedRowHeight = 89
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -56,14 +62,19 @@ class ViewReportTableViewController: UITableViewController {
             switch  indexPath.row{
             case 0:
                 cell = tableView.dequeueReusableCellWithIdentifier("basicCell", forIndexPath: indexPath) as? UITableViewCell
-                cell?.textLabel?.text = "PUT THE TITLE HERE"
+                cell?.textLabel?.text = report!.title as String
             case 1:
                 cell = tableView.dequeueReusableCellWithIdentifier("basicCell", forIndexPath: indexPath) as? UITableViewCell
-                cell?.textLabel?.text = "PUT THE AUCTION NAME HERE"
+                cell?.textLabel?.text = report!.auction as String
             case 2:
+                
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "mm-dd-yyyy"
+                let reportDate = dateFormatter.stringFromDate(report!.date!)
+                
                 cell = tableView.dequeueReusableCellWithIdentifier("basicCell", forIndexPath: indexPath) as? UITableViewCell
-                cell?.textLabel?.text = "PUT THE DATE HERE"
-                //this might take a little more logic if it's not just a string
+                cell?.textLabel?.text = reportDate
+                
             default:
                 cell = tableView.dequeueReusableCellWithIdentifier("basicCell", forIndexPath: indexPath) as? UITableViewCell
                 cell?.textLabel?.text = "Error Occurred"
@@ -73,15 +84,15 @@ class ViewReportTableViewController: UITableViewController {
             switch  indexPath.row{
             case 0:
                 cell = tableView.dequeueReusableCellWithIdentifier("basicCell", forIndexPath: indexPath) as? UITableViewCell
-                cell?.textLabel?.text = "PUT THE RECEIPT HERE"
+                cell?.textLabel?.text = "Receipts: " + String(report!.receipts)
                 //this might take a little more to make the int a string
             case 1:
                 cell = tableView.dequeueReusableCellWithIdentifier("basicCell", forIndexPath: indexPath) as? UITableViewCell
-                cell?.textLabel?.text = "PUT THE WEEK AGO HERE"
+                cell?.textLabel?.text = "Week Ago: " + String(report!.weekOldReceipts)
                 //this might take a little more to make the int a string
             case 2:
                 cell = tableView.dequeueReusableCellWithIdentifier("basicCell", forIndexPath: indexPath) as? UITableViewCell
-                cell?.textLabel?.text = "PUT THE YEAR AGO HERE"
+                cell?.textLabel?.text = "Year Ago: " + String(report!.yearOldReceipts)
                 //this might take a little more to make the int a string
             default:
                 cell = tableView.dequeueReusableCellWithIdentifier("basicCell", forIndexPath: indexPath) as? UITableViewCell
@@ -91,23 +102,38 @@ class ViewReportTableViewController: UITableViewController {
         case 2:
             let paragraphCell = tableView.dequeueReusableCellWithIdentifier("doubleLabelCell", forIndexPath: indexPath) as? DoubleLabelTableViewCell
             paragraphCell?.titleLabel.text = "Summary:"
-            paragraphCell?.infoLabel.text = "PUT THE SUMMARY HERE"
+            paragraphCell?.infoLabel.text = report!.summary as String
+            paragraphCell?.infoLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+            paragraphCell?.infoLabel?.numberOfLines = 0
             cell = paragraphCell
         case 3:
             let paragraphCell = tableView.dequeueReusableCellWithIdentifier("doubleLabelCell", forIndexPath: indexPath) as? DoubleLabelTableViewCell
             paragraphCell?.titleLabel.text = "Livestock:"
-            paragraphCell?.infoLabel.text = "PUT THE LIVESTOCK HERE"
+            paragraphCell?.infoLabel.text = report!.livestock as String
+            paragraphCell?.infoLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+            paragraphCell?.infoLabel?.numberOfLines = 0
             cell = paragraphCell
         case 4:
             let paragraphCell = tableView.dequeueReusableCellWithIdentifier("doubleLabelCell", forIndexPath: indexPath) as? DoubleLabelTableViewCell
             paragraphCell?.titleLabel.text = "Source:"
-            paragraphCell?.infoLabel.text = "PUT THE SOURCE HERE"
+            paragraphCell?.infoLabel.text = report!.source as String
+            paragraphCell?.infoLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+            paragraphCell?.infoLabel?.numberOfLines = 0
             cell = paragraphCell
         default:
             cell = tableView.dequeueReusableCellWithIdentifier("basicCell", forIndexPath: indexPath) as? UITableViewCell
             cell?.textLabel?.text = "Error Occurred"
             //we can come up with something better here
         }
+        
+        cell!.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        cell!.textLabel?.numberOfLines = 0
+        cell!.detailTextLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        cell!.detailTextLabel?.numberOfLines = 0
+        
+        cell!.setNeedsLayout()
+        cell!.layoutIfNeeded()
+        
         return cell!
     }
     
