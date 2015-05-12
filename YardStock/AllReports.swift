@@ -11,6 +11,14 @@ import UIKit
 class AllReports: NSObject {
     var reports = Array<Report>()
     
+//    private var dateFormatter: NSDateFormatter = NSDateFormatter()
+//    private var dateFormatString = "MM-dd-yyyy"
+    
+//    override init() {
+//        dateFormatter = NSDateFormatter()
+//        dateFormatter.dateFormat = dateFormatString
+//    }
+    
     func load(fromURLString: String, completionHandler: (AllReports, String?) -> Void){
         reports = Array<Report>()
         if let url = NSURL(string: fromURLString) {
@@ -50,7 +58,7 @@ class AllReports: NSObject {
                         //format dateString to NSDate date
                         dateString = listReports["date"] as? NSString,
                         reportDate = dateFormatter.dateFromString(dateString as String) as NSDate?,
-                        
+//                        reportDate = listReports["Date"] as? String,
                         reportStockyard = listReports["stockyard"] as? NSString,
                         reportAuction = listReports["auction"] as? NSString,
                         reportReceipts = listReports["receipts"] as? Int,
@@ -60,6 +68,9 @@ class AllReports: NSObject {
                         reportLivestock = listReports["livestock"] as? NSString,
                         reportSource = listReports["source"] as? NSString {
                             reports.append(Report(id: reportId, title: reportTitle, date: reportDate, stockyard: reportStockyard, auction: reportAuction, receipts: reportReceipts, weekOldReceipts: reportWeekOldReceipts, yearOldReceipts: reportYearOldReceipts, summary: reportSummary, livestock: reportLivestock, source: reportSource))
+//                        reportSource = listReports["source"] as? NSString{
+//                            var reportDateAsDate = dateFormatter.dateFromString(reportDate)
+//                            reports.append(Report(id: reportId, title: reportTitle, date: reportDateAsDate!, stockyard: reportStockyard, auction: reportAuction, receipts: reportReceipts, weekOldReceipts: reportWeekOldReceipts, yearOldReceipts: reportYearOldReceipts, summary: reportSummary, livestock: reportLivestock, source: reportSource))
                         }
                 }
                 dispatch_async(dispatch_get_main_queue(), {

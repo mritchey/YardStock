@@ -63,6 +63,7 @@ class ViewReportTableViewController: UITableViewController {
             case 0:
                 cell = tableView.dequeueReusableCellWithIdentifier("basicCell", forIndexPath: indexPath) as? UITableViewCell
                 cell?.textLabel?.text = report!.title as String
+//                cell?.textLabel?.text = "\(report?.title)"
             case 1:
                 cell = tableView.dequeueReusableCellWithIdentifier("basicCell", forIndexPath: indexPath) as? UITableViewCell
                 cell?.textLabel?.text = report!.auction as String
