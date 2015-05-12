@@ -285,7 +285,7 @@
             </objects>
             <point key="canvasLocation" x="2123" y="422"/>
         </scene>
-        <!--View Report Table View Controller-->
+        <!--View Report-->
         <scene sceneID="xZN-47-g7F">
             <objects>
                 <tableViewController id="z4L-Tq-197" customClass="ViewReportTableViewController" customModule="YardStock" customModuleProvider="target" sceneMemberID="viewController">
@@ -308,7 +308,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="doubleLabelCell" rowHeight="67" id="dcX-0k-Wdi" customClass="DoubleLabelTableViewCell" customModule="YardStock" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="doubleLabelCell" rowHeight="75" id="dcX-0k-Wdi" customClass="DoubleLabelTableViewCell" customModule="YardStock" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dcX-0k-Wdi" id="Ln2-Ez-93i">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -328,7 +328,9 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="sHD-Db-xif" secondAttribute="trailing" id="MLS-e7-sa6"/>
-                                        <constraint firstAttribute="bottom" secondItem="wCH-g7-2Li" secondAttribute="bottom" constant="5" id="O0r-n0-rwu"/>
+                                        <constraint firstAttribute="bottom" secondItem="wCH-g7-2Li" secondAttribute="bottom" constant="5" id="O0r-n0-rwu">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                        </constraint>
                                         <constraint firstItem="wCH-g7-2Li" firstAttribute="leading" secondItem="Ln2-Ez-93i" secondAttribute="leadingMargin" constant="5" id="Q7J-1I-pGJ"/>
                                         <constraint firstItem="wCH-g7-2Li" firstAttribute="top" secondItem="sHD-Db-xif" secondAttribute="bottom" constant="5" id="TGG-in-2fa"/>
                                         <constraint firstItem="sHD-Db-xif" firstAttribute="top" secondItem="Ln2-Ez-93i" secondAttribute="topMargin" id="bqY-gu-AhL"/>
@@ -347,6 +349,9 @@
                             <outlet property="delegate" destination="z4L-Tq-197" id="UaG-mI-2bU"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="View Report" id="DXV-BV-fbY">
+                        <barButtonItem key="backBarButtonItem" title=" " id="bs3-1N-dDD"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TqX-vs-wYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

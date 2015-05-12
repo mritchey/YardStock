@@ -47,6 +47,7 @@ class RecentReportViewController: UIViewController, UITableViewDataSource, UITab
         //resize cells
         tableView.estimatedRowHeight = 89
         tableView.rowHeight = UITableViewAutomaticDimension
+
     }
     
     //estimatedHeight Functions
@@ -187,7 +188,7 @@ class RecentReportViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row > 1 {
             if segSelect == 0 {
-                selectedReport = allReports.reports[indexPath.row - 2]
+                selectedReport = stockyardReports[indexPath.row - 2]
             }
         }
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
@@ -275,6 +276,8 @@ class RecentReportViewController: UIViewController, UITableViewDataSource, UITab
     
     override func viewDidAppear(animated: Bool) {
         
+        //self.stockyardReports.sort({ $0.date!.compare($1.date!) == NSComparisonResult.OrderedAscending })
+        self.allReports.reports.sort({ $0.date!.compare($1.date!) == NSComparisonResult.OrderedDescending })
         //initialize rowsAdded
         if wentAway == true {
             rowsAdded = []

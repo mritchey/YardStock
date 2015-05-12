@@ -14,7 +14,6 @@ class ViewReportTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(report?.title)
         
         tableView.estimatedRowHeight = 89
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -24,6 +23,11 @@ class ViewReportTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        //remove "Back" nav text
+        navigationController?.navigationBar.backItem?.title = ""
     }
 
     override func didReceiveMemoryWarning() {
