@@ -154,7 +154,6 @@ class RecentReportViewController: UIViewController, UITableViewDataSource, UITab
                     let dateFormatter = NSDateFormatter()
                     dateFormatter.dateFormat = "mm-dd-yyyy"
                     let mostRecentReportDate = dateFormatter.stringFromDate(mostRecentReport.date!)
-                    
                     cell!.textLabel!.text = (mostRecentReport.title as String) + "\n\n" + (mostRecentReport.auction as String) + "\n\n" + (mostRecentReportDate) + "\n\nReceipts: " + (String(mostRecentReport.receipts)) + "\n\nLast Week: " + (String(mostRecentReport.weekOldReceipts)) + "\n\nYear Ago: " + (String(mostRecentReport.yearOldReceipts)) + "\n\nSummary:\n" + (mostRecentReport.summary as String) + "\n\nLivestock:\n" + (mostRecentReport.livestock as String) + "\n\nSource:\n" + (mostRecentReport.source as String)
                 }
                 else {
